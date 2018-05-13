@@ -4,7 +4,6 @@ import config from '../utils/siteConfig'
 import Container from '../components/Container'
 import PageTitle from '../components/PageTitle'
 import ContactForm from '../components/ContactForm'
-import SEO from '../components/SEO'
 
 const Contact = ({ data }) => {
   const postNode = {
@@ -16,8 +15,6 @@ const Contact = ({ data }) => {
       <Helmet>
         <title>{`Contact - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="contact" customTitle />
-
       <Container>
         <PageTitle>Contact</PageTitle>
         <ContactForm />
