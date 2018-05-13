@@ -54,7 +54,7 @@ const EventTitle = styled.h2`
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
   }
 `
-const Text = styled.p`
+const Text = styled.div`
   padding: 1rem;
   font-size: 1rem;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
