@@ -15,10 +15,7 @@ const BgImg = styled(Img)`
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 85vh;
-    @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-      height: 100vh;
-    }
+    height: 95vh;
     & > img {
       object-fit: ${props => props.fit || 'cover'} !important;
       object-position: ${props => props.position || '50% 50%'} !important;

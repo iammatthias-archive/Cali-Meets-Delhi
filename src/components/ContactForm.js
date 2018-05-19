@@ -11,6 +11,7 @@ import 'whatwg-fetch' // Fetch Polyfill
 
 const Form = styled.form`
   max-width: ${props => props.theme.sizes.maxWidthCentered};
+  padding: 2rem;
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
@@ -99,22 +100,21 @@ const Modal = styled.div`
   padding: 2em;
   border-radius: 2px;
   position: fixed;
-  min-width: 75%;
+  width: 100%;
   top: 50%;
   left: 50%;
+  height: 100%;
   transform: translate(-50%, -50%);
   margin: 0 auto;
   z-index: 99;
   display: flex;
+  flex: 1;
   flex-flow: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   transition: 0.2s all;
   opacity: ${props => (props.visible ? '1' : '0')};
   visibility: ${props => (props.visible ? 'visible' : 'hidden')};
-  @media screen and (min-width: ${props => props.theme.responsive.small}) {
-    min-width: inherit;
-    max-width: 400px;
-  }
   p {
     line-height: 1.6;
     margin: 0 0 2em 0;
@@ -238,10 +238,7 @@ class ContactForm extends React.Component {
         <Submit name="submit" type="submit" value="Send" />
 
         <Modal visible={this.state.showModal}>
-          <p>
-            Thank you for reaching out. I will get back to you as soon as
-            possible.
-          </p>
+          <p>We'll be in touch!</p>
           <Button onClick={this.closeModal}>Okay</Button>
         </Modal>
       </Form>

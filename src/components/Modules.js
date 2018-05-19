@@ -8,6 +8,7 @@ import Customs from './Customs'
 import Body from './Body'
 import Agenda from './Agenda'
 import Registry from './Registry'
+import Contact from './Contact'
 
 const Modules = props => {
   return (
@@ -26,7 +27,11 @@ const Modules = props => {
 
           {module.__typename == 'ContentfulIntro' && (
             <div id="ourStory">
-              <Intro heading={module.heading} text={module.text} />
+              <Intro
+                heading={module.heading}
+                text={module.text}
+                sectionHead={module.sectionHead}
+              />
             </div>
           )}
 
@@ -36,18 +41,36 @@ const Modules = props => {
                 name={module.name}
                 image={module.image}
                 text={module.text}
+                sectionHead={module.sectionHead}
               />
             </div>
           )}
 
           {module.__typename == 'ContentfulAgenda' && (
             <div id="schedule">
-              <Agenda heading={module.heading} events={module.events} />
+              <Agenda
+                heading={module.heading}
+                events={module.events}
+                sectionHead={module.sectionHead}
+              />
             </div>
           )}
           {module.__typename == 'ContentfulRegistry' && (
             <div id="registry">
-              <Registry heading={module.heading} text={module.text} />
+              <Registry
+                heading={module.heading}
+                text={module.text}
+                sectionHead={module.sectionHead}
+              />
+            </div>
+          )}
+          {module.__typename == 'ContentfulContact' && (
+            <div id="contact">
+              <Contact
+                heading={module.heading}
+                text={module.text}
+                sectionHead={module.sectionHead}
+              />
             </div>
           )}
         </li>

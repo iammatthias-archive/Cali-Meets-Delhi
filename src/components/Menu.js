@@ -34,18 +34,14 @@ li {
 }
 a {
   text-decoration: none;
-  color: ${props => props.theme.colors.black};
+  color: ${props => props.theme.colors.red};
   font-weight: 600;
   transition: all .5s;
+
 `
 
 const showSettings = evt => {
   evt.preventDefault()
-}
-
-const activeLinkStyle = {
-  color: 'white',
-  borderBottom: '2px solid white',
 }
 
 var styles = {
@@ -57,7 +53,7 @@ var styles = {
     top: '24px',
   },
   bmBurgerBars: {
-    background: '#223843',
+    background: '#852827',
     height: '5px',
   },
   bmCrossButton: {
@@ -66,7 +62,7 @@ var styles = {
     top: '25px',
   },
   bmCross: {
-    background: '#223843',
+    background: '#852827',
   },
   bmMenu: {
     padding: '1em 0',
@@ -76,7 +72,7 @@ var styles = {
     fill: '#223843',
   },
   bmOverlay: {
-    background: 'rgba(252, 248, 247,.618)',
+    background: 'rgba(252, 248, 247,.8)',
   },
 }
 
@@ -111,7 +107,7 @@ const Menu = () => {
             </Link>
           </li>
           <li>
-            <Link to="#" exact>
+            <Link to="#contact" exact>
               Contact Us
             </Link>
           </li>

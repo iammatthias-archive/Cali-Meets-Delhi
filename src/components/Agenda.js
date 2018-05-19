@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Reveal from 'react-reveal/Reveal'
+import Img from 'gatsby-image'
 
 const Wrapper = styled.div`
   background: ${props => props.theme.colors.pink};
@@ -17,44 +18,49 @@ const CardList = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0 0 2rem;
+  justify-content: space-between;
+  padding: 2rem;
   width: 100vw;
   max-width: ${props => props.theme.sizes.maxWidth};
 `
 const Card = styled.li`
   flex: 1 40%;
   max-width: 100%;
-  margin: 1em;
-  border: 1px solid ${props => props.theme.colors.black};
+  background: ${props => props.theme.colors.paleYellow};
   border-radius: 2px;
   transition: 0.3s;
+  margin: 1rem;
   @media (hover: none) {
     transform: none !important;
   }
 `
-const Info = styled.div`
-  width: 100%;
+const Heading = styled.div`
+  max-width: 18.5rem;
   padding: 2rem;
+  position: relative;
 `
-
-const Heading = styled.h1``
 const EventTitle = styled.h3`
+  color: ${props => props.theme.colors.red}
   padding: 1rem;
 `
 const Date = styled.p`
-  padding: 1rem 1rem 0.25rem;
+  padding: 0.5rem 1rem;
 `
-const Text = styled.p`
-  padding: 0.25rem 1rem 1rem;
+const Text = styled.div`
+  padding: 0.5rem 1rem 1rem;
 `
 
 const Agenda = props => {
   return (
     <Wrapper>
       <Reveal>
-        <Info>
-          <Heading>{props.heading}</Heading>
-        </Info>
+        <Heading>
+          <Img
+            sizes={props.sectionHead.sizes}
+            alt={props.sectionHead.title}
+            title={props.sectionHead.title}
+          />
+        </Heading>
         <CardList>
           {props.events.map((event, index) => (
             <Card

@@ -14,19 +14,16 @@ const Wrapper = styled.div`
     height: 100vh;
   }
 `
-
-const Info = styled.div`
-  width: 100vw;
-  max-width: ${props => props.theme.sizes.maxWidth};
-  padding: 4rem 2rem 2rem;
-`
-
-const Heading = styled.h1`
-  margin: 0 0 2rem 0;
+const Heading = styled.div`
+  max-width: 17rem;
+  padding: 2rem;
   position: relative;
 `
 
 const Text = styled.div`
+  padding: 2rem;
+  width: 100vw;
+  max-width: ${props => props.theme.sizes.maxWidth};
   position: relative;
 `
 
@@ -34,14 +31,18 @@ const Intro = props => {
   return (
     <Wrapper>
       <Reveal>
-        <Info>
-          <Heading>{props.heading}</Heading>
-          <Text
-            dangerouslySetInnerHTML={{
-              __html: props.text.childMarkdownRemark.html,
-            }}
+        <Heading>
+          <Img
+            sizes={props.sectionHead.sizes}
+            alt={props.sectionHead.title}
+            title={props.sectionHead.title}
           />
-        </Info>
+        </Heading>
+        <Text
+          dangerouslySetInnerHTML={{
+            __html: props.text.childMarkdownRemark.html,
+          }}
+        />
       </Reveal>
     </Wrapper>
   )

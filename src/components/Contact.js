@@ -2,38 +2,26 @@ import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import Reveal from 'react-reveal/Reveal'
+import ContactForm from './ContactForm'
 
 const Wrapper = styled.div`
-  background: ${props => props.theme.colors.paleYellow};
+  background: ${props => props.theme.colors.pink};
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   min-height: 85vh;
-  height: 100%;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    min-height: 100vh;
-  }
-`
-
-const Heading = styled.div`
-  max-width: 15rem;
-  padding: 2rem
-  position: relative;
-`
-
-const Zola = styled.div`
-  padding: 0rem 2rem 2rem;
-  width: 100vw;
-  max-width: ${props => props.theme.sizes.maxWidth};
-  height: 100%;
-  iframe {
-    width: 100%;
     height: 100vh;
   }
 `
+const Heading = styled.div`
+  max-width: 17rem;
+  padding: 2rem;
+  position: relative;
+`
 
-const Registry = props => {
+const Intro = props => {
   return (
     <Wrapper>
       <Reveal>
@@ -44,14 +32,10 @@ const Registry = props => {
             title={props.sectionHead.title}
           />
         </Heading>
-        <Zola
-          dangerouslySetInnerHTML={{
-            __html: props.text.childMarkdownRemark.html,
-          }}
-        />
+        <ContactForm />
       </Reveal>
     </Wrapper>
   )
 }
 
-export default Registry
+export default Intro

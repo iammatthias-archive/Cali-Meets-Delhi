@@ -19,40 +19,49 @@ const About = styled.div`
   width: 100vw;
   max-width: ${props => props.theme.sizes.maxWidth};
   margin: 0 auto;
-  padding: 0 2rem 2rem 2rem;
+  padding: 4rem 2rem 2rem;
   width: 100%;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    flex-direction: ${props => (props.switch ? 'row-reverse' : 'row')};
-  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `
 
 const Profile = styled.div`
   border-radius: 2px;
-  margin: 2rem 0;
   position: relative;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    width: 59%;
-  }
+  flex: 1 40%;
+  max-width: 100%;
 `
 
 const Details = styled.div`
-  margin: 0 0 2rem 0;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    width: 38%;
-  }
+  flex: 1 40%;
+  max-width: 100%;
+  padding: 2rem;
 `
 
-const Name = styled.h1``
+const Heading = styled.div`
+  max-width: 33rem;
+  padding: 2rem;
+  position: relative;
+`
 
-const Text = styled.div``
+const Text = styled.div`
+  width: 100%;
+  position: relative;
+`
 
 const Biography = props => {
   return (
     <Wrapper>
       <Reveal>
+        <Heading>
+          <Img
+            sizes={props.sectionHead.sizes}
+            alt={props.sectionHead.title}
+            title={props.sectionHead.title}
+          />
+        </Heading>
         <About switch={props.switch}>
           <Profile>
             <Img
@@ -65,7 +74,6 @@ const Biography = props => {
           </Profile>
 
           <Details>
-            <Name>{props.name}</Name>
             <Text
               dangerouslySetInnerHTML={{
                 __html: props.text.childMarkdownRemark.html,

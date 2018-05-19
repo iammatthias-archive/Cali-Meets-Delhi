@@ -84,6 +84,12 @@ export const query = graphql`
             ... on ContentfulIntro {
               title
               heading
+              sectionHead {
+                title
+                sizes(maxWidth: 1000) {
+                  ...GatsbyContentfulSizes_withWebp_noBase64
+                }
+              }
               text {
                 childMarkdownRemark {
                   html
@@ -93,6 +99,18 @@ export const query = graphql`
             ... on ContentfulCustoms {
               title
               name
+              sectionHead {
+                title
+                sizes(maxWidth: 1000) {
+                  ...GatsbyContentfulSizes_withWebp_noBase64
+                }
+              }
+              sectionHead {
+                title
+                sizes(maxWidth: 1000) {
+                  ...GatsbyContentfulSizes_withWebp_noBase64
+                }
+              }
               image {
                 title
                 sizes(maxWidth: 1000) {
@@ -108,6 +126,18 @@ export const query = graphql`
             ... on ContentfulAgenda {
               title
               heading
+              sectionHead {
+                title
+                sizes(maxWidth: 1000) {
+                  ...GatsbyContentfulSizes_withWebp_noBase64
+                }
+              }
+              sectionHead {
+                title
+                sizes(maxWidth: 1000) {
+                  ...GatsbyContentfulSizes_withWebp_noBase64
+                }
+              }
               events {
                 __typename
                 ... on ContentfulEvent {
@@ -126,6 +156,33 @@ export const query = graphql`
             ... on ContentfulRegistry {
               title
               heading
+              sectionHead {
+                title
+                sizes(maxWidth: 1000) {
+                  ...GatsbyContentfulSizes_withWebp_noBase64
+                }
+              }
+              sectionHead {
+                title
+                sizes(maxWidth: 1000) {
+                  ...GatsbyContentfulSizes_withWebp_noBase64
+                }
+              }
+              text {
+                childMarkdownRemark {
+                  html
+                }
+              }
+            }
+            ... on ContentfulContact {
+              title
+              heading
+              sectionHead {
+                title
+                sizes(maxWidth: 1000) {
+                  ...GatsbyContentfulSizes_withWebp_noBase64
+                }
+              }
               text {
                 childMarkdownRemark {
                   html

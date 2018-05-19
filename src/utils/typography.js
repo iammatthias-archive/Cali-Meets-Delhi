@@ -6,15 +6,11 @@ const typography = new Typography({
   baseFontSize: '16px',
   scaleRatio: 3,
   baseLineHeight: 1.618,
-  headerFontFamily: ['Dancing Script', 'sans-serif'],
+  headerFontFamily: ['IBM Plex Sans', 'sans-serif'],
   bodyFontFamily: ['IBM Plex Sans', 'sans-serif'],
-  headerWeight: 400,
+  headerWeight: 700,
 
   googleFonts: [
-    {
-      name: 'Dancing Script',
-      styles: ['400'],
-    },
     {
       name: 'IBM Plex Sans',
       styles: ['400', '700'],
@@ -23,16 +19,22 @@ const typography = new Typography({
 
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
     'h1,h2,h3,h4,h5,h6': {
-      lineHeight: 1.1,
-      fontFamily: ['Dancing Script', 'sans-serif'].join(','),
+      color: '#852827',
+      lineHeight: 1.618,
+      fontFamily: ['IBM Plex Sans', 'sans-serif'].join(','),
+    },
+    p: {
+      color: '#223843',
+      lineHeight: 1.382,
+      fontFamily: ['IBM Plex Sans', 'sans-serif'].join(','),
     },
     a: {
-      color: '#001f3f',
+      color: '#223843',
       textDecoration: 'underline',
-      fontFamily: ['Dancing Script', 'sans-serif'].join(','),
+      fontFamily: ['IBM Plex Sans', 'sans-serif'].join(','),
     },
     'a:hover,a:active': {
-      color: '#FE5F55',
+      color: '#223843',
     },
     blockquote: {
       fontStyle: 'italic',
