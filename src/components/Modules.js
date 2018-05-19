@@ -4,9 +4,10 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import Hero from './Hero'
 import Intro from './Intro'
-import Biography from './Biography'
+import Customs from './Customs'
 import Body from './Body'
 import Agenda from './Agenda'
+import Registry from './Registry'
 
 const Modules = props => {
   return (
@@ -14,29 +15,40 @@ const Modules = props => {
       {props.modules.map((module, index) => (
         <li key={index}>
           {module.__typename == 'ContentfulHero' && (
-            <Hero
-              logo={module.logo}
-              image={module.image}
-              links={module.links}
-            />
+            <div id="top">
+              <Hero
+                logo={module.logo}
+                image={module.image}
+                links={module.links}
+              />
+            </div>
           )}
 
           {module.__typename == 'ContentfulIntro' && (
-            <div>
+            <div id="ourStory">
               <Intro heading={module.heading} text={module.text} />
             </div>
           )}
 
-          {module.__typename == 'ContentfulBiography' && (
-            <Biography
-              name={module.name}
-              image={module.image}
-              text={module.text}
-            />
+          {module.__typename == 'ContentfulCustoms' && (
+            <div id="customs">
+              <Customs
+                name={module.name}
+                image={module.image}
+                text={module.text}
+              />
+            </div>
           )}
 
           {module.__typename == 'ContentfulAgenda' && (
-            <Agenda heading={module.heading} events={module.events} />
+            <div id="schedule">
+              <Agenda heading={module.heading} events={module.events} />
+            </div>
+          )}
+          {module.__typename == 'ContentfulRegistry' && (
+            <div id="registry">
+              <Registry heading={module.heading} text={module.text} />
+            </div>
           )}
         </li>
       ))}

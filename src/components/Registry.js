@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import Reveal from 'react-reveal/Reveal'
 
 const Wrapper = styled.div`
-  background: ${props => props.theme.colors.pink};
+  background: ${props => props.theme.colors.paleYellow};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,7 +49,7 @@ const Text = styled.div`
   }
 `
 
-const Intro = props => {
+const Registry = props => {
   return (
     <Wrapper>
       <Reveal>
@@ -66,4 +66,4 @@ const Intro = props => {
   )
 }
 
-export default Intro
+export default Registry

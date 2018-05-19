@@ -4,13 +4,14 @@ import Img from 'gatsby-image'
 import Reveal from 'react-reveal/Reveal'
 
 const Wrapper = styled.div`
-  background: ${props => props.theme.colors.tertiary};
+  background: ${props => props.theme.colors.paleYellow};
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  min-height: 85vh;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    min-height: 100vh;
+    height: 100vh;
   }
 `
 
@@ -29,7 +30,7 @@ const About = styled.div`
 
 const Profile = styled.div`
   border-radius: 2px;
-  margin: 0 0 2rem 0;
+  margin: 2rem 0;
   position: relative;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     width: 59%;

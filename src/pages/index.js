@@ -90,7 +90,7 @@ export const query = graphql`
                 }
               }
             }
-            ... on ContentfulBiography {
+            ... on ContentfulCustoms {
               title
               name
               image {
@@ -120,6 +120,15 @@ export const query = graphql`
                       html
                     }
                   }
+                }
+              }
+            }
+            ... on ContentfulRegistry {
+              title
+              heading
+              text {
+                childMarkdownRemark {
+                  html
                 }
               }
             }

@@ -3,9 +3,11 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const Header = styled.header`
-  background: ${props => props.theme.colors.secondary};
+  background: ${props => props.theme.colors.white};
   width: 100%;
   padding: 1.5em 0;
+  position: fixed;
+  z-index: 999;
 `
 const Nav = styled.nav`
   width: 100%;
@@ -25,18 +27,15 @@ const Nav = styled.nav`
 
   a {
     text-decoration: none;
-    color: #121212;
+    color: ${props => props.theme.colors.black};
+    transition: color 0.5s;
     font-weight: 600;
-    transition: all 0.2s;
     &:hover {
-      color: red;
+      color: ${props => props.theme.colors.red};
+      transition: color 0.5s;
     }
   }
 `
-
-const activeLinkStyle = {
-  color: '#121212',
-}
 
 const Menu = () => {
   return (
@@ -44,28 +43,33 @@ const Menu = () => {
       <Nav>
         <ul>
           <li>
-            <Link to="/" exact activeStyle={activeLinkStyle}>
+            <Link to="#top" exact>
+              Top
+            </Link>
+          </li>
+          <li>
+            <Link to="#ourStory" exact>
               Our Story
             </Link>
           </li>
           <li>
-            <Link to="/" exact activeStyle={activeLinkStyle}>
-              Customs
+            <Link to="#customs" exact>
+              Customs & Traditions
             </Link>
           </li>
           <li>
-            <Link to="/" exact activeStyle={activeLinkStyle}>
+            <Link to="#schedule" exact>
               Schedule
             </Link>
           </li>
           <li>
-            <Link to="/" exact activeStyle={activeLinkStyle}>
+            <Link to="#registry" exact>
               Registry
             </Link>
           </li>
           <li>
-            <Link to="/" exact activeStyle={activeLinkStyle}>
-              Questions
+            <Link to="#" exact>
+              Contact Us
             </Link>
           </li>
         </ul>

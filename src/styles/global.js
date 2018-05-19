@@ -24,11 +24,13 @@ injectGlobal`
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    color: #223843;
   }
 
   /* Added to Fix Footer to bottom of viewport */
   html, body {
     height: 100%;
+    background: #f5efe9;
   }
   .siteRoot {
     height: 100vh;
@@ -80,7 +82,6 @@ injectGlobal`
   }
 
   body {
-    background: white;
     line-height: 1;
     font-size: 100%;
     font-variant-ligatures: none;

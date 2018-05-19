@@ -15,8 +15,8 @@ const BgImg = styled(Img)`
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 400px;
-    @media (min-width: ${props => props.theme.responsive.medium}) {
+    min-height: 85vh;
+    @media screen and (min-width: ${props => props.theme.responsive.medium}) {
       height: 100vh;
     }
     & > img {

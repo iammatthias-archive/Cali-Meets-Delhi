@@ -3,29 +3,27 @@ import styled from 'styled-components'
 import Reveal from 'react-reveal/Reveal'
 
 const Wrapper = styled.div`
-  background: ${props => props.theme.colors.secondary};
+  background: ${props => props.theme.colors.pink};
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  min-height: 85vh;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    min-height: 100vh;
+    height: 100vh;
   }
 `
 const CardList = styled.ul`
   display: flex;
-  flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  margin: 0 0 2rem;
 `
 const Card = styled.li`
-  flex-grow: 1;
-  flex-basis: 0;
+  flex: 1 40%;
   max-width: 100%;
-  margin: 1rem;
-  border: 1px solid ${props => props.theme.colors.tertiary};
+  margin: 1em;
+  border: 1px solid ${props => props.theme.colors.black};
   border-radius: 2px;
   transition: 0.3s;
   @media (hover: none) {

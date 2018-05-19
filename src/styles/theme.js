@@ -1,9 +1,11 @@
 const theme = {
   colors: {
-    base: '#121212', // Dark Gray
-    secondary: '#f5efe9', // Light Gray
-    tertiary: '#e0dcd7', // Medium Gray
-    highlight: '#aaaea2', // Forrest Green
+    black: '#223843', // JAPANESE INDIGO
+    white: '#FCF8F7', // SNOW
+    pink: '#F9EAE1', // MISTY ROSE
+    paleYellow: '#FFFBF2', // FLORAL WHITE
+    red: '#852827', // VIVID AUBURN
+    yellow: '#EDBD2E', // SAFFRON
   },
   sizes: {
     maxWidth: '1200px',
