@@ -11,21 +11,6 @@ import Container from '../components/Container'
 import { Element, scrollSpy, Events } from 'react-scroll'
 import Reveal from 'react-reveal/Reveal'
 
-const Title = styled.h2`
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 2em;
-  padding: 4rem 0 4rem 0;
-  z-index: 99;
-  position: relative;
-  @media screen and (min-width: ${props => props.theme.responsive.small}) {
-    font-size: 2.5em;
-  }
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    font-size: 4em;
-  }
-`
-
 class IndexPage extends React.Component {
   render() {
     const sections = this.props.data.allContentfulSection.edges
@@ -37,11 +22,6 @@ class IndexPage extends React.Component {
         <Container>
           {sections.map(({ node: section }) => (
             <Element key={section.id} name={section.slug}>
-              {section.heading && (
-                <Reveal>
-                  <Title>{section.heading}</Title>
-                </Reveal>
-              )}
               <Modules modules={section.modules} />
             </Element>
           ))}
