@@ -97,7 +97,7 @@ const Menu = () => {
       <MenuMobile styles={styles} isOpen={false}>
         <ul>
           <li>
-            <Link to="#top" exact>
+            <Link to="/" exact>
               Top
             </Link>
           </li>
