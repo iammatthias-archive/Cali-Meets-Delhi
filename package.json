@@ -5,6 +5,7 @@
   "repository": "https://github.com/iammatthias/Cali-Meets-Delhi.git",
   "author": "Matthias Jordan <me@iammatthias.com>",
   "dependencies": {
+    "anchorate": "^1.2.3",
     "chalk": "^2.3.2",
     "contentful-import": "^7.0.1",
     "dotenv": "^5.0.1",
@@ -34,7 +35,6 @@
     "react-plx": "^1.1.2",
     "react-reveal": "^1.2.1",
     "react-scroll": "^1.7.9",
-    "smooth-anchorate": "^1.2.1",
     "styled-components": "^3.2.5",
     "whatwg-fetch": "^2.0.4"
   },

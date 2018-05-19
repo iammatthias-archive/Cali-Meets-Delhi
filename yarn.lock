@@ -333,6 +333,12 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+anchorate@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/anchorate/-/anchorate-1.2.3.tgz#64af2fd7ad545f536f5c0dfe58f8d3ecf7ae769b"
+  dependencies:
+    css.escape "^1.5.0"
+
 ansi-align@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ansi-align/-/ansi-align-2.0.0.tgz#c36aeccba563b89ceb556f3690f0b1d9e3547f7f"
@@ -2689,7 +2695,7 @@ css-what@2.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-2.1.0.tgz#9467d032c38cfaefb9f2d79501253062f87fa1bd"
 
-css.escape@1.5.1:
+css.escape@^1.5.0:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/css.escape/-/css.escape-1.5.1.tgz#42e27d4fa04ae32f931a4b4d4191fa9cddee97cb"
 
@@ -9425,17 +9431,6 @@ slice-ansi@1.0.0:
   resolved "https://registry.yarnpkg.com/slice-ansi/-/slice-ansi-1.0.0.tgz#044f1a49d8842ff307aad6b505ed178bd950134d"
   dependencies:
     is-fullwidth-code-point "^2.0.0"
-
-smooth-anchorate@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/smooth-anchorate/-/smooth-anchorate-1.2.1.tgz#045e968b732d31f7d43f6ae2428f87732522cfdc"
-  dependencies:
-    css.escape "1.5.1"
-    smoothscroll-polyfill "0.3.4"
-
-smoothscroll-polyfill@0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/smoothscroll-polyfill/-/smoothscroll-polyfill-0.3.4.tgz#6f59459788b6b8a7e21d223ef674151d1e3ddefd"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"

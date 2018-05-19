@@ -2,10 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import { slide as SideMenu } from 'react-burger-menu'
-import { smoothAnchorate } from 'smooth-anchorate'
+import { anchorate } from 'anchorate'
 
-exports.onRouteChange = () => {
-  smoothAnchorate()
+exports.onRouteUpdate = () => {
+  anchorate()
 }
 
 const Header = styled.header`
