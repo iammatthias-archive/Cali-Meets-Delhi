@@ -10,7 +10,8 @@ import 'whatwg-fetch' // Fetch Polyfill
 */
 
 const Form = styled.form`
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  width: 100vw;
+  max-width: ${props => props.theme.sizes.maxWidth};
   padding: 2rem;
   margin: 0 auto;
   display: flex;
