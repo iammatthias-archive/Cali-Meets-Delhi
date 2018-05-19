@@ -18,15 +18,8 @@ const Wrapper = styled.div`
 
 const Heading = styled.h3`
   padding: 4rem 2rem 2rem;
-  font-family: 'PT Serif', serif;
-  font-size: 1.25em;
-  font-weight: bold;
-  line-height: 1.4;
   margin: 0 0 2rem 0;
   position: relative;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    font-size: 1.75em;
-  }
 `
 
 const Zola = styled.div`

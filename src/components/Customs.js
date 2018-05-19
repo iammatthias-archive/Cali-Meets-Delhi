@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 `
 
 const About = styled.div`
+  width: 100vw;
   max-width: ${props => props.theme.sizes.maxWidth};
   margin: 0 auto;
   padding: 0 2rem 2rem 2rem;
@@ -44,24 +45,9 @@ const Details = styled.div`
   }
 `
 
-const Name = styled.h2`
-  font-family: 'PT Serif', serif;
-  font-weight: 600;
-  display: inline-block;
-  font-size: 1.25em;
-  margin: 0 0 1rem 0;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    font-size: 1.75em;
-  }
-`
+const Name = styled.h1``
 
-const Text = styled.div`
-  margin: 0 0 2rem 0;
-  font-size: 1.1em;
-  p {
-    line-height: 1.5;
-  }
-`
+const Text = styled.div``
 
 const Biography = props => {
   return (

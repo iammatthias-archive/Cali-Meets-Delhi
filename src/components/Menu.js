@@ -21,29 +21,22 @@ const BurgerMenuWrapper = styled.i`
 `
 
 const MenuMobile = styled(SideMenu)`
-  padding: 1.5em 0;
+  padding: 1.5rem 0;
   ul {
   display: flex;
   justify-content: space-between;
+  padding: 1.5rem 0;
 }
 li {
   display: block;
   margin-left: 1em;
-  padding: .5rem 0rem;
+  padding: .8rem 0rem;
 }
 a {
   text-decoration: none;
   color: ${props => props.theme.colors.black};
   font-weight: 600;
-  transition: all .2s;
-  &:hover {
-    color: ${props => props.theme.colors.black};
-  }
-  .bm-item-list a {
-    color: ${props => props.theme.colors.black};
-    padding: 1rem 2rem;
-    text-decoration: none;
-  }
+  transition: all .5s;
 `
 
 const showSettings = evt => {
@@ -76,15 +69,11 @@ var styles = {
     background: '#223843',
   },
   bmMenu: {
-    padding: '2.5em 1.5em 0',
-    fontSize: '1.15em',
+    padding: '1em 0',
+    fontSize: '2em',
   },
   bmMorphShape: {
     fill: '#223843',
-  },
-  bmItemList: {
-    color: '#223843',
-    padding: '0.8em',
   },
   bmOverlay: {
     background: 'rgba(252, 248, 247,.618)',

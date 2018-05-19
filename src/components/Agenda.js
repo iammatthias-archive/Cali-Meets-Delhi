@@ -18,6 +18,8 @@ const CardList = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 0 2rem;
+  width: 100vw;
+  max-width: ${props => props.theme.sizes.maxWidth};
 `
 const Card = styled.li`
   flex: 1 40%;
@@ -35,35 +37,15 @@ const Info = styled.div`
   padding: 2rem;
 `
 
-const Heading = styled.h1`
-  font-family: 'PT Serif', serif;
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.4;
-  position: relative;
-  text-align: center;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    font-size: 1.75em;
-  }
-`
-const EventTitle = styled.h2`
+const Heading = styled.h1``
+const EventTitle = styled.h3`
   padding: 1rem;
-  font-size: 1.5rem;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-  }
-`
-const Text = styled.div`
-  padding: 1rem;
-  font-size: 1rem;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-  }
 `
 const Date = styled.p`
-  white-space: nowrap;
-  padding: 1rem;
-  font-size: 0.75rem;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-  }
+  padding: 1rem 1rem 0.25rem;
+`
+const Text = styled.p`
+  padding: 0.25rem 1rem 1rem;
 `
 
 const Agenda = props => {
@@ -83,7 +65,6 @@ const Agenda = props => {
               text={event.text}
             >
               <EventTitle>{event.title}</EventTitle>
-              <Text>{event.heading}</Text>
               <Date>{event.dateTime}</Date>
               <Text
                 dangerouslySetInnerHTML={{
