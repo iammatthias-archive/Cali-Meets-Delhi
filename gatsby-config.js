@@ -65,16 +65,22 @@ module.exports = {
     },
     'gatsby-plugin-sitemap',
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: config.siteTitle,
-        short_name: config.shortTitle,
-        description: config.siteDescription,
+        name: 'Cali Meets Delhi',
+        short_name: 'Cali&Delhi',
         start_url: '/',
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
+        background_color: '#FCF8F7',
+        theme_color: '#FCF8F7',
         display: 'minimal-ui',
-        icon: `static${config.siteLogo}`,
+        icon: 'static/logos/logo-512.png', // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://calimeetsdelhi.com`,
       },
     },
     {
