@@ -30,8 +30,11 @@ const About = styled.div`
 const Profile = styled.div`
   border-radius: 2px;
   position: relative;
-  flex: 1 40%;
+  flex: 1 100%;
   max-width: 100%;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    flex: 1 40%;
+  }
 `
 
 const Details = styled.div`
