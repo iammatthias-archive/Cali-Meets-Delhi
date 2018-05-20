@@ -25,6 +25,9 @@ const Text = styled.div`
   width: 100vw;
   max-width: ${props => props.theme.sizes.maxWidth};
   position: relative;
+  p {
+    margin-bottom: 1rem;
+  }
 `
 
 const Intro = props => {
