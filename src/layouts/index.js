@@ -28,6 +28,11 @@ const TemplateWrapper = ({ children }) => (
         <meta property="og:site_name" content={siteConfig.siteTitle} />
         <meta property="og:url" content="https://calimeetsdelhi.com/" />
         <link rel="apple-touch-icon" href="/logos/logo-512.png" />
+        <link
+          rel="shortcut icon"
+          href="/logos/logo-512.png"
+          type="image/x-icon"
+        />
       </Helmet>
       {children()}
     </div>
