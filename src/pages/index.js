@@ -128,6 +128,7 @@ export const query = graphql`
                   text {
                     childMarkdownRemark {
                       html
+                      excerpt(pruneLength: 250)
                     }
                   }
                 }

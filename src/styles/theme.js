@@ -1,11 +1,12 @@
 const theme = {
   colors: {
+    pureWhite: '#ffffff',
+    white: '#FDFDFD',
+    offWhite: '#F3F3F3',
     black: '#223843', // JAPANESE INDIGO
-    white: '#FCF8F7', // SNOW
-    pink: '#F9EAE1', // MISTY ROSE
-    paleYellow: '#FFFBF2', // FLORAL WHITE
-    red: '#852827', // VIVID AUBURN
-    yellow: '#EDBD2E', // SAFFRON
+    paleBlue: '#E9EFE9', // Alice Blue
+    yellow: '#F2A541', // BRIGHT YELLOW (CRAYOLA)
+    red: '#FF8A42', // PERMANENT GERANIUM LAKE
   },
   sizes: {
     maxWidth: '1200px',

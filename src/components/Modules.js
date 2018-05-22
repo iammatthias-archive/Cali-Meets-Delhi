@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import Hero from './Hero'
 import Intro from './Intro'
-import Customs from './Customs'
 import Body from './Body'
 import Agenda from './Agenda'
 import Registry from './Registry'
@@ -29,17 +28,6 @@ const Modules = props => {
             <div id="ourStory">
               <Intro
                 heading={module.heading}
-                text={module.text}
-                sectionHead={module.sectionHead}
-              />
-            </div>
-          )}
-
-          {module.__typename == 'ContentfulCustoms' && (
-            <div id="customs">
-              <Customs
-                name={module.name}
-                image={module.image}
                 text={module.text}
                 sectionHead={module.sectionHead}
               />

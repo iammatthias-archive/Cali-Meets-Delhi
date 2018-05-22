@@ -34,10 +34,20 @@ li {
 }
 a {
   text-decoration: none;
-  color: ${props => props.theme.colors.red};
+  color: #852827;
   font-weight: 600;
   transition: all .5s;
-
+`
+const Text = styled.div`
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  img {
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    padding-right: 0.5rem;
+  }
 `
 
 const showSettings = evt => {
@@ -110,6 +120,15 @@ const Menu = () => {
             <Link to="#contact" exact>
               Contact Us
             </Link>
+          </li>
+          <li>
+            <Text>
+              <img src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzIwMCcgd2lkdGg9JzIwMCcgIGZpbGw9IiMwMDAwMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxOCAyMiIgdmVyc2lvbj0iMS4xIiB4PSIwcHgiIHk9IjBweCI+PHRpdGxlPkdyb3VwPC90aXRsZT48ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz48ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgLTEuMDAwMDAwKSIgZmlsbD0iIzAwMDAwMCI+PHBhdGggZD0iTTUsOCBMMS45OTUwODkyOSw4IEMwLjg5MjYyMjc5OSw4IDAsOC44OTE3OTY5MyAwLDkuOTkxODg0MTkgTDAsMjEuMDA4MTE1OCBDMCwyMi4xMDY2MDI3IDAuODkzMjMxOTAyLDIzIDEuOTk1MDg5MjksMjMgTDE2LjAwNDkxMDcsMjMgQzE3LjEwNzM3NzIsMjMgMTgsMjIuMTA4MjAzMSAxOCwyMS4wMDgxMTU4IEwxOCw5Ljk5MTg4NDE5IEMxOCw4Ljg5MzM5NzMzIDE3LjEwNjc2ODEsOCAxNi4wMDQ5MTA3LDggTDEzLDggTDEzLDkuNSBMMTYuNSw5LjUgTDE2LjUsMjEuNSBMMS41LDIxLjUgTDEuNSw5LjUgTDUsOS41IEw1LDggWiI+PC9wYXRoPjxyZWN0IHg9IjguMjUiIHk9IjIiIHdpZHRoPSIxLjUiIGhlaWdodD0iMTMiIHJ4PSIwLjc1Ij48L3JlY3Q+PHJlY3QgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNy40MDkwMTAsIDMuNDA5MDEwKSByb3RhdGUoNDUuMDAwMDAwKSB0cmFuc2xhdGUoLTcuNDA5MDEwLCAtMy40MDkwMTApICIgeD0iNi42NTkwMSIgeT0iMC40MDkwMDk2MzQiIHdpZHRoPSIxLjUiIGhlaWdodD0iNiIgcng9IjAuNzUiPjwvcmVjdD48cmVjdCB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMC41OTA5OTAsIDMuNDA5MDEwKSByb3RhdGUoMTM1LjAwMDAwMCkgdHJhbnNsYXRlKC0xMC41OTA5OTAsIC0zLjQwOTAxMCkgIiB4PSI5Ljg0MDk5IiB5PSIwLjQwOTAxMDM2NiIgd2lkdGg9IjEuNSIgaGVpZ2h0PSI2IiByeD0iMC43NSI+PC9yZWN0PjwvZz48L2c+PC9zdmc+" />
+              <p>
+                Click the share icon on mobile to add this site to your
+                homescreen.
+              </p>
+            </Text>
           </li>
         </ul>
       </MenuMobile>

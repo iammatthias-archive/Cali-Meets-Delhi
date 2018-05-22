@@ -24,21 +24,21 @@ const Form = styled.form`
     font-size: inherit;
     border: none;
     outline: none;
-    background: ${props => props.theme.colors.tertiary};
-    color: ${props => props.theme.colors.base};
+    background: ${props => props.theme.colors.offWhite};
+    color: ${props => props.theme.colors.black};
     border-radius: 2px;
     padding: 1em;
     &::-webkit-input-placeholder {
-      color: gray;
+      color: ${props => props.theme.colors.black};
     }
     &::-moz-placeholder {
-      color: gray;
+      color: ${props => props.theme.colors.black};
     }
     &:-ms-input-placeholder {
-      color: gray;
+      color: ${props => props.theme.colors.black};
     }
     &:-moz-placeholder {
-      color: gray;
+      color: ${props => props.theme.colors.black};
     }
     &:required {
       box-shadow: none;
@@ -88,7 +88,7 @@ const Message = styled.textarea`
 
 const Submit = styled.input`
   background: ${props => props.theme.colors.base} !important;
-  color: white !important;
+  color: ${props => props.theme.colors.black} !important;
   cursor: pointer;
   transition: 0.2s;
   &:hover {

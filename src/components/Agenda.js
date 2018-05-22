@@ -4,14 +4,14 @@ import Reveal from 'react-reveal/Reveal'
 import Img from 'gatsby-image'
 
 const Wrapper = styled.div`
-  background: ${props => props.theme.colors.pink};
+  background: ${props => props.theme.colors.yellow};
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   min-height: 85vh;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    height: 100vh;
+    min-height: 100vh;
   }
 `
 const CardList = styled.ul`
@@ -24,9 +24,9 @@ const CardList = styled.ul`
   max-width: ${props => props.theme.sizes.maxWidth};
 `
 const Card = styled.li`
-  flex: 1 40%;
-  max-width: 100%;
-  background: ${props => props.theme.colors.paleYellow};
+  flex: 1 100%;
+  width: 100%;
+  background: ${props => props.theme.colors.white};
   border-radius: 2px;
   transition: 0.3s;
   margin: 1rem;
@@ -48,6 +48,9 @@ const Date = styled.p`
 `
 const Text = styled.div`
   padding: 0.5rem 1rem 1rem;
+  p {
+    padding: 0.5rem 0;
+  }
 `
 
 const Agenda = props => {
@@ -71,7 +74,6 @@ const Agenda = props => {
               text={event.text}
             >
               <EventTitle>{event.title}</EventTitle>
-              <Date>{event.dateTime}</Date>
               <Text
                 dangerouslySetInnerHTML={{
                   __html: event.text.childMarkdownRemark.html,

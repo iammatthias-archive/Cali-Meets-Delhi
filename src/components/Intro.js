@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import Reveal from 'react-reveal/Reveal'
 
 const Wrapper = styled.div`
-  background: ${props => props.theme.colors.pink};
+  background: ${props => props.theme.colors.offWhite};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +26,7 @@ const Text = styled.div`
   max-width: ${props => props.theme.sizes.maxWidth};
   position: relative;
   p {
-    margin-bottom: 1rem;
+    padding: 0.5rem 0;
   }
 `
 
