@@ -24,7 +24,7 @@ const Form = styled.form`
     font-size: inherit;
     border: none;
     outline: none;
-    background: ${props => props.theme.colors.offWhite};
+    background: ${props => props.theme.colors.bg1};
     color: ${props => props.theme.colors.black};
     border-radius: 2px;
     padding: 1em;
@@ -64,35 +64,46 @@ const Form = styled.form`
 
 const Name = styled.input`
   margin: 0 0 1em 0;
+  height: 4rem;
   width: 100%;
-  @media (min-width: ${props => props.theme.responsive.small}) {
+  @media (min-width: ${props => props.theme.responsive.medium}) {
     width: 49%;
   }
 `
 
 const Email = styled.input`
   margin: 0 0 1em 0;
+  height: 4rem;
   width: 100%;
-  @media (min-width: ${props => props.theme.responsive.small}) {
+  @media (min-width: ${props => props.theme.responsive.medium}) {
     width: 49%;
   }
 `
 
 const Message = styled.textarea`
   width: 100%;
+  padding: 1rem;
   margin: 0 0 1em 0;
   line-height: 1.6;
-  min-height: 250px;
+  min-height: 8rem;
   resize: vertical;
 `
 
 const Submit = styled.input`
-  background: ${props => props.theme.colors.base} !important;
-  color: ${props => props.theme.colors.black} !important;
+  background: ${props => props.theme.colors.accent2} !important;
+  color: ${props => props.theme.colors.bg2} !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.25rem !important;
+  height: 4rem;
   cursor: pointer;
   transition: 0.2s;
   &:hover {
     background: ${props => props.theme.colors.highlight} !important;
+  }
+  width: 100%;
+  @media (min-width: ${props => props.theme.responsive.medium}) {
+    width: 24.5%;
   }
 `
 
@@ -101,10 +112,10 @@ const Modal = styled.div`
   padding: 2em;
   border-radius: 2px;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 50%;
   left: 50%;
-  height: 100%;
+  height: 120vh;
   transform: translate(-50%, -50%);
   margin: 0 auto;
   z-index: 99;
@@ -116,14 +127,10 @@ const Modal = styled.div`
   transition: 0.2s all;
   opacity: ${props => (props.visible ? '1' : '0')};
   visibility: ${props => (props.visible ? 'visible' : 'hidden')};
-  p {
-    line-height: 1.6;
-    margin: 0 0 2em 0;
-  }
 `
 
 const Button = styled.div`
-  background: ${props => props.theme.colors.base};
+  background: ${props => props.theme.colors.redAlt};
   font-size: 1em;
   display: inline-block;
   margin: 0 auto;
@@ -131,6 +138,7 @@ const Button = styled.div`
   outline: none;
   cursor: pointer;
   color: white;
+  height: 4rem;
   padding: 1em;
   border-radius: 2px;
   text-decoration: none;
@@ -141,6 +149,10 @@ const Button = styled.div`
   }
   &:hover {
     background: ${props => props.theme.colors.highlight};
+  }
+  width: 100%;
+  @media (min-width: ${props => props.theme.responsive.medium}) {
+    width: 24.5%;
   }
 `
 
@@ -239,8 +251,13 @@ class ContactForm extends React.Component {
         <Submit name="submit" type="submit" value="Send" />
 
         <Modal visible={this.state.showModal}>
-          <p>We'll be in touch!</p>
-          <Button onClick={this.closeModal}>Okay</Button>
+          <h2>We'll be in touch!</h2>
+          <Submit
+            name="okay"
+            type="submit"
+            onClick={this.closeModal}
+            value="Okay"
+          />
         </Modal>
       </Form>
     )

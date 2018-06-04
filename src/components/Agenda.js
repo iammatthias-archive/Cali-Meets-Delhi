@@ -4,12 +4,13 @@ import Reveal from 'react-reveal/Reveal'
 import Img from 'gatsby-image'
 
 const Wrapper = styled.div`
-  background: ${props => props.theme.colors.yellow};
+  background: ${props => props.theme.colors.bg2};
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   min-height: 85vh;
+  padding: 10vh 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     min-height: 100vh;
   }
@@ -26,7 +27,6 @@ const CardList = styled.ul`
 const Card = styled.li`
   flex: 1 100%;
   width: 100%;
-  background: ${props => props.theme.colors.white};
   border-radius: 2px;
   transition: 0.3s;
   margin: 1rem;
@@ -40,16 +40,22 @@ const Heading = styled.div`
   position: relative;
 `
 const EventTitle = styled.h3`
-  color: ${props => props.theme.colors.red}
+  color: ${props => props.theme.colors.black}
   padding: 1rem;
 `
 const Date = styled.p`
+  color: ${props => props.theme.colors.black}
   padding: 0.5rem 1rem;
 `
 const Text = styled.div`
+  color: ${props => props.theme.colors.black}
   padding: 0.5rem 1rem 1rem;
   p {
+    color: ${props => props.theme.colors.black}
     padding: 0.5rem 0;
+  }
+  em, strong {
+    color: ${props => props.theme.colors.black}
   }
 `
 

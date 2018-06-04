@@ -5,12 +5,13 @@ import Reveal from 'react-reveal/Reveal'
 import ContactForm from './ContactForm'
 
 const Wrapper = styled.div`
-  background: ${props => props.theme.colors.yellow};
+  background: ${props => props.theme.colors.bg2};
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   min-height: 85vh;
+  padding: 10vh 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     height: 100vh;
   }

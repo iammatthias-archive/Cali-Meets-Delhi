@@ -4,13 +4,14 @@ import Img from 'gatsby-image'
 import Reveal from 'react-reveal/Reveal'
 
 const Wrapper = styled.div`
-  background: ${props => props.theme.colors.offWhite};
+  background: ${props => props.theme.colors.bg1};
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   min-height: 85vh;
   height: 100%;
+  padding: 10vh 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     min-height: 100vh;
   }

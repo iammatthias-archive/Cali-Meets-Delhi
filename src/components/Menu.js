@@ -9,7 +9,7 @@ exports.onRouteUpdate = () => {
 }
 
 const Header = styled.header`
-  background: ${props => props.theme.colors.white};
+  background: ${props => props.theme.colors.accent2};
   width: 75px;
   height: 75px;
   position: fixed;
@@ -21,7 +21,7 @@ const BurgerMenuWrapper = styled.i`
 `
 
 const MenuMobile = styled(SideMenu)`
-  padding: 1.5rem 0;
+  padding: 4rem 0;
   ul {
   display: flex;
   justify-content: space-between;
@@ -34,7 +34,7 @@ li {
 }
 a {
   text-decoration: none;
-  color: #852827;
+  color: ${props => props.theme.colors.accent1};
   font-weight: 600;
   transition: all .5s;
 `
@@ -42,11 +42,15 @@ const Text = styled.div`
   font-size: 16px;
   display: flex;
   flex-direction: row;
+  p {
+    color: ${props => props.theme.colors.accent1};
+  }
   img {
     height: 25px;
     width: 25px;
     display: inline-block;
     padding-right: 0.5rem;
+    fill: color: ${props => props.theme.colors.accent1};
   }
 `
 
@@ -63,7 +67,7 @@ var styles = {
     top: '24px',
   },
   bmBurgerBars: {
-    background: '#852827',
+    background: '#EFF1F3',
     height: '5px',
   },
   bmCrossButton: {
@@ -72,7 +76,7 @@ var styles = {
     top: '25px',
   },
   bmCross: {
-    background: '#852827',
+    background: '#D77A61',
   },
   bmMenu: {
     padding: '1em 0',
@@ -82,7 +86,7 @@ var styles = {
     fill: '#223843',
   },
   bmOverlay: {
-    background: 'rgba(252, 248, 247,.8)',
+    background: 'rgba(252, 248, 247,.9)',
   },
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Foot = styled.footer`
-  background: ${props => props.theme.colors.white};
+  background: ${props => props.theme.colors.bg1};
   width: 100%;
 `
 
