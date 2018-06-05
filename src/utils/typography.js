@@ -3,7 +3,7 @@ import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
 
 const typography = new Typography({
   title: 'Cali Meets Delhi',
-  baseFontSize: '16px',
+  baseFontSize: '20px',
   scaleRatio: 3,
   baseLineHeight: 1.618,
   headerFontFamily: ['IBM Plex Sans', 'sans-serif'],
