@@ -20,7 +20,6 @@ const CardList = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 2rem;
   width: 100vw;
   max-width: ${props => props.theme.sizes.maxWidth};
 `
@@ -29,7 +28,7 @@ const Card = styled.li`
   width: 100%;
   border-radius: 2px;
   transition: 0.3s;
-  margin: 1rem;
+  padding: 2rem;
   @media (hover: none) {
     transform: none !important;
   }
@@ -41,7 +40,7 @@ const Heading = styled.div`
 `
 const EventTitle = styled.h3`
   color: ${props => props.theme.colors.black}
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0;
 `
 const Date = styled.p`
   color: ${props => props.theme.colors.black}
@@ -49,7 +48,6 @@ const Date = styled.p`
 `
 const Text = styled.div`
   color: ${props => props.theme.colors.black}
-  padding: 0.5rem 1rem 1rem;
   p {
     color: ${props => props.theme.colors.black}
     padding: 0.5rem 0;
