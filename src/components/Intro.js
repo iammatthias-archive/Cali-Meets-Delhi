@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   min-height: 85vh;
   padding: 10vh 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    height: 100vh;
+    min-height: 100vh;
   }
 `
 const Heading = styled.div`

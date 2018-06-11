@@ -56,9 +56,6 @@ const Logo = styled.div`
 const Hero = props => {
   return (
     <Wrapper className="hero">
-      <Helmet>
-        <meta property="og:image" content={props.image.sizes.src} />
-      </Helmet>
       <Plx
         parallaxData={[
           {
@@ -67,7 +64,7 @@ const Hero = props => {
             properties: [
               {
                 startValue: 1,
-                endValue: 1.1,
+                endValue: 1.25,
                 property: 'scale',
               },
             ],

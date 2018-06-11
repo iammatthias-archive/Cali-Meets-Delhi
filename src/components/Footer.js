@@ -29,6 +29,7 @@ const Item = styled.li`
   display: inline-block;
   padding: 0.25em 0;
   width: 100%;
+  font-size: 0.75rem;
   @media screen and (min-width: ${props => props.theme.responsive.small}) {
     width: auto;
   }
