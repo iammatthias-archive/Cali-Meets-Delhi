@@ -8,6 +8,7 @@ import Modules from '../components/Modules'
 import Footer from '../components/Footer'
 import Menu from '../components/Menu'
 import Container from '../components/Container'
+import AddToHomescreen from '../components/AddToHomescreen'
 import { Element, scrollSpy, Events } from 'react-scroll'
 import Reveal from 'react-reveal/Reveal'
 
