@@ -56,6 +56,7 @@ export const query = graphql`
               }
               logo {
                 title
+                description
                 sizes(maxWidth: 1000) {
                   ...GatsbyContentfulSizes_withWebp_noBase64
                 }
@@ -66,6 +67,7 @@ export const query = graphql`
               heading
               sectionHead {
                 title
+                description
                 sizes(maxWidth: 1000) {
                   ...GatsbyContentfulSizes_withWebp_noBase64
                 }
@@ -81,12 +83,7 @@ export const query = graphql`
               name
               sectionHead {
                 title
-                sizes(maxWidth: 1000) {
-                  ...GatsbyContentfulSizes_withWebp_noBase64
-                }
-              }
-              sectionHead {
-                title
+                description
                 sizes(maxWidth: 1000) {
                   ...GatsbyContentfulSizes_withWebp_noBase64
                 }
@@ -108,12 +105,7 @@ export const query = graphql`
               heading
               sectionHead {
                 title
-                sizes(maxWidth: 1000) {
-                  ...GatsbyContentfulSizes_withWebp_noBase64
-                }
-              }
-              sectionHead {
-                title
+                description
                 sizes(maxWidth: 1000) {
                   ...GatsbyContentfulSizes_withWebp_noBase64
                 }
@@ -139,12 +131,7 @@ export const query = graphql`
               heading
               sectionHead {
                 title
-                sizes(maxWidth: 1000) {
-                  ...GatsbyContentfulSizes_withWebp_noBase64
-                }
-              }
-              sectionHead {
-                title
+                description
                 sizes(maxWidth: 1000) {
                   ...GatsbyContentfulSizes_withWebp_noBase64
                 }
@@ -160,6 +147,7 @@ export const query = graphql`
               heading
               sectionHead {
                 title
+                description
                 sizes(maxWidth: 1000) {
                   ...GatsbyContentfulSizes_withWebp_noBase64
                 }

@@ -74,7 +74,7 @@ const Hero = props => {
         <BgImg
           sizes={props.image.sizes}
           position={props.position}
-          alt={props.image.title}
+          alt={props.image.description}
           title={props.image.title}
           backgroundColor={'#aaaea2'}
         />
@@ -83,7 +83,7 @@ const Hero = props => {
         <Logo>
           <Img
             sizes={props.logo.sizes}
-            alt={props.logo.title}
+            alt={props.logo.description}
             title={props.logo.title}
           />
         </Logo>
