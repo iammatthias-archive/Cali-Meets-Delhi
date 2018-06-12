@@ -106,11 +106,6 @@ const Menu = () => {
             </Link>
           </li>
           <li>
-            <Link to="#customs" exact>
-              Customs & Traditions
-            </Link>
-          </li>
-          <li>
             <Link to="#schedule" exact>
               Schedule
             </Link>

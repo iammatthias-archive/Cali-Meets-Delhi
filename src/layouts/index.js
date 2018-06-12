@@ -7,7 +7,6 @@ import styled, { ThemeProvider } from 'styled-components'
 import globals from '../styles/global'
 import theme from '../styles/theme'
 import config from 'react-reveal/globals'
-import favicon from '../images/favicon.ico'
 config({ ssrFadeout: true })
 
 const TemplateWrapper = ({ children }) => (
