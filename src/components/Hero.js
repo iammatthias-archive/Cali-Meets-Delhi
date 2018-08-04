@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import Plx from 'react-plx'
-import Helmet from 'react-helmet'
 
 const Wrapper = styled.div`
   position: relative;
@@ -20,7 +19,7 @@ const BgImg = styled(Img)`
       object-fit: ${props => props.fit || 'cover'} !important;
       object-position: ${props => props.position || '50% 50%'} !important;
     }
-    &:before {
+    &::before {
       content: '';
       background: rgba(0, 0, 0, 0.25);
       position: absolute;

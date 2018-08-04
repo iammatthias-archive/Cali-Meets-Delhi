@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
   @media screen and (min-width: ${props =>
       props.theme.responsive.small}) and (min-height: 450px) {
-    margin: 0rem;
+    margin: 0;
   }
 `
 

@@ -16,27 +16,24 @@ const Header = styled.header`
   z-index: 999;
 `
 
-const BurgerMenuWrapper = styled.i`
-  display: none;
-`
-
 const MenuMobile = styled(SideMenu)`
   padding: 4rem 0;
   ul {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.5rem 0;
-}
-li {
-  display: block;
-  margin-left: 1em;
-  padding: .8rem 0rem;
-}
-a {
-  text-decoration: none;
-  color: ${props => props.theme.colors.accent1};
-  font-weight: 600;
-  transition: all .5s;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+  }
+  li {
+    display: block;
+    margin-left: 1em;
+    padding: 0.8rem 0;
+  }
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.colors.accent1};
+    font-weight: 600;
+    transition: all 0.5s;
+  }
 `
 const Text = styled.div`
   font-size: 16px;
@@ -50,13 +47,9 @@ const Text = styled.div`
     width: 25px;
     display: inline-block;
     padding-right: 0.5rem;
-    fill: color: ${props => props.theme.colors.accent1};
+    fill: ${props => props.theme.colors.accent1};
   }
 `
-
-const showSettings = evt => {
-  evt.preventDefault()
-}
 
 var styles = {
   bmBurgerButton: {

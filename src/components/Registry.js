@@ -19,12 +19,12 @@ const Wrapper = styled.div`
 
 const Heading = styled.div`
   max-width: 15rem;
-  padding: 2rem
+  padding: 2rem;
   position: relative;
 `
 
 const Zola = styled.div`
-  padding: 0rem 2rem 2rem;
+  padding: 0 2rem 2rem;
   width: 100vw;
   max-width: ${props => props.theme.sizes.maxWidth};
   height: 100%;

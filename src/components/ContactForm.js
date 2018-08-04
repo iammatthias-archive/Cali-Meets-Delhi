@@ -98,10 +98,10 @@ const Submit = styled.input`
   height: 4rem;
   cursor: pointer;
   transition: 0.2s;
+  width: 100%;
   &:hover {
     background: ${props => props.theme.colors.highlight} !important;
   }
-  width: 100%;
   @media (min-width: ${props => props.theme.responsive.medium}) {
     width: 24.5%;
   }
@@ -127,33 +127,6 @@ const Modal = styled.div`
   transition: 0.2s all;
   opacity: ${props => (props.visible ? '1' : '0')};
   visibility: ${props => (props.visible ? 'visible' : 'hidden')};
-`
-
-const Button = styled.div`
-  background: ${props => props.theme.colors.redAlt};
-  font-size: 1em;
-  display: inline-block;
-  margin: 0 auto;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  color: white;
-  height: 4rem;
-  padding: 1em;
-  border-radius: 2px;
-  text-decoration: none;
-  transition: 0.2s;
-  z-index: 99;
-  &:focus {
-    outline: none;
-  }
-  &:hover {
-    background: ${props => props.theme.colors.highlight};
-  }
-  width: 100%;
-  @media (min-width: ${props => props.theme.responsive.medium}) {
-    width: 24.5%;
-  }
 `
 
 const encode = data => {

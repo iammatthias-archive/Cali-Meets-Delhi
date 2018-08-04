@@ -1,20 +1,17 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import styled from 'styled-components'
-import Img from 'gatsby-image'
 import Hero from './Hero'
 import Intro from './Intro'
-import Body from './Body'
 import Agenda from './Agenda'
 import Registry from './Registry'
 import Contact from './Contact'
+import Counter from './Counter'
 
 const Modules = props => {
   return (
     <ul>
       {props.modules.map((module, index) => (
         <li key={index}>
-          {module.__typename == 'ContentfulHero' && (
+          {module.__typename === 'ContentfulHero' && (
             <div id="top">
               <Hero
                 logo={module.logo}
@@ -24,8 +21,9 @@ const Modules = props => {
             </div>
           )}
 
-          {module.__typename == 'ContentfulIntro' && (
+          {module.__typename === 'ContentfulIntro' && (
             <div id="ourStory">
+              <Counter />
               <Intro
                 heading={module.heading}
                 text={module.text}
@@ -33,8 +31,7 @@ const Modules = props => {
               />
             </div>
           )}
-
-          {module.__typename == 'ContentfulAgenda' && (
+          {module.__typename === 'ContentfulAgenda' && (
             <div id="schedule">
               <Agenda
                 heading={module.heading}
@@ -43,7 +40,7 @@ const Modules = props => {
               />
             </div>
           )}
-          {module.__typename == 'ContentfulRegistry' && (
+          {module.__typename === 'ContentfulRegistry' && (
             <div id="registry">
               <Registry
                 heading={module.heading}
@@ -52,7 +49,7 @@ const Modules = props => {
               />
             </div>
           )}
-          {module.__typename == 'ContentfulContact' && (
+          {module.__typename === 'ContentfulContact' && (
             <div id="contact">
               <Contact
                 heading={module.heading}

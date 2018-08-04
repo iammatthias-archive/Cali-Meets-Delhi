@@ -39,21 +39,18 @@ const Heading = styled.div`
   position: relative;
 `
 const EventTitle = styled.h3`
-  color: ${props => props.theme.colors.black}
+  color: ${props => props.theme.colors.black};
   padding: 1rem 1rem 1rem 0;
 `
-const Date = styled.p`
-  color: ${props => props.theme.colors.black}
-  padding: 0.5rem 1rem;
-`
 const Text = styled.div`
-  color: ${props => props.theme.colors.black}
+  color: ${props => props.theme.colors.black};
   p {
-    color: ${props => props.theme.colors.black}
+    color: ${props => props.theme.colors.black};
     padding: 0.5rem 0;
   }
-  em, strong {
-    color: ${props => props.theme.colors.black}
+  em,
+  strong {
+    color: ${props => props.theme.colors.black};
   }
 `
 

@@ -76,7 +76,6 @@ module.exports = {
         icon: 'static/logos/logo-512.png', // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
@@ -90,5 +89,6 @@ module.exports = {
         showSpinner: false,
       },
     },
+    `gatsby-plugin-offline`,
   ],
 }

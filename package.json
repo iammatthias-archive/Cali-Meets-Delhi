@@ -31,6 +31,7 @@
     "inquirer": "^5.2.0",
     "lodash": "^4.17.5",
     "path": "^0.12.7",
+    "prop-types": "^15.6.2",
     "react-burger-menu": "^2.4.4",
     "react-helmet": "^5.2.0",
     "react-plx": "^1.1.2",

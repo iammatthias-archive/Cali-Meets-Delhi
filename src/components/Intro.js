@@ -30,7 +30,6 @@ const Text = styled.div`
     padding: 0.5rem 0;
   }
 `
-
 const Intro = props => {
   return (
     <Wrapper>

@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import Reveal from 'react-reveal/Reveal'
 
 const Body = props => {

@@ -16,7 +16,6 @@ const Wrapper = styled.div`
 `
 
 const About = styled.div`
-  width: 100vw;
   max-width: ${props => props.theme.sizes.maxWidth};
   margin: 0 auto;
   padding: 4rem 2rem 2rem;
