@@ -14,6 +14,10 @@ const Header = styled.header`
   height: 75px;
   position: fixed;
   z-index: 999;
+  transition: 0.5s ease;
+  &:hover {
+    background: ${props => props.theme.colors.accent1} !important;
+  }
 `
 
 const MenuMobile = styled(SideMenu)`

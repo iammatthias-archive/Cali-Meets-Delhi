@@ -10,7 +10,7 @@ import 'whatwg-fetch' // Fetch Polyfill
 */
 
 const Form = styled.form`
-  width: 100vw;
+  width: 100%;
   max-width: ${props => props.theme.sizes.maxWidth};
   padding: 2rem;
   margin: 0 auto;
@@ -91,16 +91,16 @@ const Message = styled.textarea`
 
 const Submit = styled.input`
   background: ${props => props.theme.colors.accent2} !important;
+  width: 100%;
   color: ${props => props.theme.colors.bg2} !important;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.25rem !important;
   height: 4rem;
   cursor: pointer;
-  transition: 0.2s;
-  width: 100%;
+  transition: 0.5s ease;
   &:hover {
-    background: ${props => props.theme.colors.highlight} !important;
+    background: ${props => props.theme.colors.accent1} !important;
   }
   @media (min-width: ${props => props.theme.responsive.medium}) {
     width: 24.5%;

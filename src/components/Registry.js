@@ -11,7 +11,8 @@ const Wrapper = styled.div`
   position: relative;
   min-height: 85vh;
   height: 100%;
-  padding: 10vh 0;
+  padding: 10vh calc(env(safe-area-inset-right) + 2rem) 10vh
+    calc(env(safe-area-inset-left) + 2rem);
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     min-height: 100vh;
   }
@@ -25,11 +26,10 @@ const Heading = styled.div`
 
 const Zola = styled.div`
   padding: 0 2rem 2rem;
-  width: 100vw;
   max-width: ${props => props.theme.sizes.maxWidth};
   height: 100%;
   iframe {
-    width: 100%;
+    max-width: 100%;
     height: 100vh;
   }
 `

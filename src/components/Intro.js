@@ -10,7 +10,8 @@ const Wrapper = styled.div`
   justify-content: center;
   position: relative;
   min-height: 85vh;
-  padding: 10vh 0;
+  padding: 10vh calc(env(safe-area-inset-right) + 2rem) 10vh
+    calc(env(safe-area-inset-left) + 2rem);
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     min-height: 100vh;
   }
@@ -23,7 +24,7 @@ const Heading = styled.div`
 
 const Text = styled.div`
   padding: 2rem;
-  width: 100vw;
+  width: 100%;
   max-width: ${props => props.theme.sizes.maxWidth};
   position: relative;
   p {

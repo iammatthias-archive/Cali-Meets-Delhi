@@ -15,8 +15,9 @@ const TemplateWrapper = ({ children }) => (
         <meta charSet="utf-8" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
         />
+        <meta name="theme-color" content="#D77A61" />
         <meta name="description" content={siteConfig.siteDescription} />
         <meta property="og:title" content={siteConfig.siteTitle} />
         <meta property="og:description" content={siteConfig.siteDescription} />

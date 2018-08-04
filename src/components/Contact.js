@@ -11,9 +11,10 @@ const Wrapper = styled.div`
   justify-content: center;
   position: relative;
   min-height: 85vh;
-  padding: 10vh 0;
+  padding: 10vh calc(env(safe-area-inset-right) + 2rem) 10vh
+    calc(env(safe-area-inset-left) + 2rem);
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    height: 100vh;
+    min-height: 100vh;
   }
 `
 const Heading = styled.div`

@@ -12,6 +12,8 @@ const Wrapper = styled.footer`
   justify-content: space-between;
   align-items: flex-start;
   margin: 0 auto;
+  padding: 10vh calc(env(safe-area-inset-right) + 2rem) 10vh
+    calc(env(safe-area-inset-left) + 2rem);
   max-width: ${props => props.theme.sizes.maxWidth};
 `
 
