@@ -4,12 +4,21 @@ import styled from 'styled-components'
 
 const CountdownWrapper = styled.div`
   text-align: center;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @media screen and (min-width: ${props => props.theme.responsive.large}) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 `
 const CountdownCol = styled.div`
-  display: inline-block;
+  margin: 1rem 2rem;
 `
 const CountdownColElement = styled.div`
-  margin: 0 2rem;
   display: flex;
   flex-direction: column;
   h2,
@@ -54,7 +63,6 @@ class Countdown extends Component {
       hours: 0,
       min: 0,
       sec: 0,
-      millisec: 0,
     }
 
     // calculate time difference between now and expected date

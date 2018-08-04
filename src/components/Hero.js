@@ -38,7 +38,7 @@ const Logo = styled.div`
   z-index: 2;
   width: 60%;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 350px;

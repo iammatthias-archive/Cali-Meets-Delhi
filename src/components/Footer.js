@@ -19,7 +19,7 @@ const List = styled.ul`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   padding: 1em 0 2em;
   margin: 0 1.5em;
@@ -35,7 +35,7 @@ const Item = styled.li`
   }
   a {
     display: inline-block;
-    padding: 0 0.5rem;
+    padding: 0.25rem;
     font-weight: 600;
     transition: all 0.2s;
     color: ${props => props.theme.colors.base};
@@ -93,6 +93,15 @@ const Footer = () => (
             rel="noopener noreferrer"
           >
             Github
+          </a>
+          <br />
+          Photo Credit:{' '}
+          <a
+            href="http://weddings.jenniferlourie.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Jennifer Lourie
           </a>
         </Item>
       </List>
