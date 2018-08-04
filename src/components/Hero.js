@@ -80,11 +80,7 @@ const Hero = props => {
       </Plx>
       {props.logo && (
         <Logo>
-          <Img
-            sizes={props.logo.sizes}
-            alt={props.logo.description}
-            title={props.logo.title}
-          />
+          <Img sizes={props.logo.sizes} alt={props.logo.description} />
         </Logo>
       )}
     </Wrapper>
