@@ -16,17 +16,12 @@ const Wrapper = styled.div`
   }
 `
 
-const currentDate = new Date()
-const year =
-  currentDate.getMonth() === 11 && currentDate.getDate() > 23
-    ? currentDate.getFullYear() + 1
-    : currentDate.getFullYear()
 
 const Intro = props => {
   return (
     <Wrapper>
       <Reveal>
-        <Countdown date={`${year}-11-20T00:00:00`} />
+        <Countdown date={`$2018-11-20T00:00:00`} />
       </Reveal>
     </Wrapper>
   )
