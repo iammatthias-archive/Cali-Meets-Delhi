@@ -16,12 +16,11 @@ const Wrapper = styled.div`
   }
 `
 
-
 const Intro = props => {
   return (
     <Wrapper>
       <Reveal>
-        <Countdown date={`2018-11-20T00:00:00`} />
+        <Countdown date={`2018-11-20T12:00:00+05:30`} />
       </Reveal>
     </Wrapper>
   )
