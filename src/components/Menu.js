@@ -71,6 +71,7 @@ var styles = {
     height: '25px',
     width: '25px',
     top: '25px',
+    right: '25px',
   },
   bmCross: {
     background: '#D77A61',
@@ -90,7 +91,7 @@ var styles = {
 const Menu = () => {
   return (
     <Header>
-      <MenuMobile styles={styles} isOpen={false}>
+      <MenuMobile styles={styles} width={'100%'} isOpen={false}>
         <ul>
           <li>
             <Link to="/" exact>
