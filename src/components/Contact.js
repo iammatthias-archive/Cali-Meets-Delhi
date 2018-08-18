@@ -5,7 +5,7 @@ import Reveal from 'react-reveal/Reveal'
 import ContactForm from './ContactForm'
 
 const Wrapper = styled.div`
-  background: ${props => props.theme.colors.bg1};
+  background: ${props => props.theme.colors.bg2};
   display: flex;
   align-items: center;
   justify-content: center;

@@ -40,7 +40,7 @@ const Modules = props => {
               />
             </div>
           )}
-          {module.__typename === 'ContentfulRegistry' && (
+          {/* {module.__typename === 'ContentfulRegistry' && (
             <div id="registry">
               <Registry
                 heading={module.heading}
@@ -48,7 +48,7 @@ const Modules = props => {
                 sectionHead={module.sectionHead}
               />
             </div>
-          )}
+          )}*/}
           {module.__typename === 'ContentfulContact' && (
             <div id="contact">
               <Contact

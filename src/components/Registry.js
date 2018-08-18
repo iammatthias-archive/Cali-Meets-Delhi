@@ -45,6 +45,7 @@ const Registry = props => {
             title={props.sectionHead.title}
           />
         </Heading>
+
         <Zola
           dangerouslySetInnerHTML={{
             __html: props.text.childMarkdownRemark.html,
