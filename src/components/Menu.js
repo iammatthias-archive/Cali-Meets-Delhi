@@ -10,8 +10,8 @@ exports.onRouteUpdate = () => {
 
 const Header = styled.header`
   background: ${props => props.theme.colors.accent2};
-  width: 75px;
-  height: 75px;
+  width: 65px;
+  height: 65px;
   position: fixed;
   z-index: 999;
   transition: 0.5s ease;
@@ -58,18 +58,18 @@ const Text = styled.div`
 var styles = {
   bmBurgerButton: {
     position: 'relative',
-    width: '30px',
-    height: '30px',
-    left: '23px',
-    top: '24px',
+    width: '25px',
+    height: '25px',
+    left: '20px',
+    top: '20px',
   },
   bmBurgerBars: {
     background: '#EFF1F3',
     height: '5px',
   },
   bmCrossButton: {
-    height: '25px',
-    width: '25px',
+    height: '35px',
+    width: '35px',
     top: '25px',
     right: '25px',
   },
