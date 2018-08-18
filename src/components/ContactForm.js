@@ -60,6 +60,9 @@ const Form = styled.form`
     opacity: ${props => (props.overlay ? '.8' : '0')};
     visibility: ${props => (props.overlay ? 'visible' : 'hidden')};
   }
+  label {
+    display: none;
+  }
 `
 
 const Name = styled.input`
@@ -196,8 +199,9 @@ class ContactForm extends React.Component {
             <input name="bot" onChange={this.handleInputChange} />
           </label>
         </p>
-
+        <label for="name">Name</label>
         <Name
+          id="name"
           name="name"
           type="text"
           placeholder="Full Name"
@@ -205,7 +209,9 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
+        <label for="email">Email</label>
         <Email
+          id="email"
           name="email"
           type="email"
           placeholder="Email"
@@ -213,7 +219,9 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
+        <label for="message">Message</label>
         <Message
+          id="message"
           name="message"
           type="text"
           placeholder="Message"
@@ -221,6 +229,7 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
+
         <Submit name="submit" type="submit" value="Send" />
 
         <Modal visible={this.state.showModal}>

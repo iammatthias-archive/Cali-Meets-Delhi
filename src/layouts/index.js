@@ -11,6 +11,7 @@ const TemplateWrapper = ({ children }) => (
   <ThemeProvider theme={theme}>
     <div>
       <Helmet>
+        <html lang="en" />
         <title>{siteConfig.siteTitle}</title>
         <meta charSet="utf-8" />
         <meta
