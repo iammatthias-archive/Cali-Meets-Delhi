@@ -1,16 +1,24 @@
+import styled from 'styled-components'
 import React from 'react'
 import Hero from './Hero'
 import Intro from './Intro'
 import Agenda from './Agenda'
-import Registry from './Registry'
 import Contact from './Contact'
 import Counter from './Counter'
+
+const ListItem = styled.li`
+  background: ${props => props.theme.colors.bg1};
+
+  &:nth-child(odd) {
+    background: ${props => props.theme.colors.bg2};
+  }
+`
 
 const Modules = props => {
   return (
     <ul>
       {props.modules.map((module, index) => (
-        <li key={index}>
+        <ListItem key={index}>
           {module.__typename === 'ContentfulHero' && (
             <div id="top">
               <Hero
@@ -40,15 +48,6 @@ const Modules = props => {
               />
             </div>
           )}
-          {/* {module.__typename === 'ContentfulRegistry' && (
-            <div id="registry">
-              <Registry
-                heading={module.heading}
-                text={module.text}
-                sectionHead={module.sectionHead}
-              />
-            </div>
-          )}*/}
           {module.__typename === 'ContentfulContact' && (
             <div id="contact">
               <Contact
@@ -58,7 +57,7 @@ const Modules = props => {
               />
             </div>
           )}
-        </li>
+        </ListItem>
       ))}
     </ul>
   )

@@ -1,8 +1,10 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
 import PropTypes from 'prop-types'
 import Modules from '../components/Modules'
 import Footer from '../components/Footer'
-import Menu from '../components/Menu'
+
 import Container from '../components/Container'
 import { Element } from 'react-scroll'
 
@@ -10,8 +12,7 @@ class IndexPage extends React.Component {
   render() {
     const sections = this.props.data.allContentfulSection.edges
     return (
-      <div>
-        <Menu />
+      <Layout>
         <Container>
           {sections.map(({ node: section }) => (
             <Element key={section.id} name={section.slug}>
@@ -20,7 +21,7 @@ class IndexPage extends React.Component {
           ))}
         </Container>
         <Footer />
-      </div>
+      </Layout>
     )
   }
 }
@@ -71,28 +72,6 @@ export const query = graphql`
                 }
               }
             }
-            ... on ContentfulCustoms {
-              title
-              name
-              sectionHead {
-                title
-                description
-                sizes(maxWidth: 1000) {
-                  ...GatsbyContentfulSizes_withWebp_noBase64
-                }
-              }
-              image {
-                title
-                sizes(maxWidth: 1000) {
-                  ...GatsbyContentfulSizes_withWebp_noBase64
-                }
-              }
-              text {
-                childMarkdownRemark {
-                  html
-                }
-              }
-            }
             ... on ContentfulAgenda {
               title
               heading
@@ -116,22 +95,6 @@ export const query = graphql`
                       excerpt(pruneLength: 250)
                     }
                   }
-                }
-              }
-            }
-            ... on ContentfulRegistry {
-              title
-              heading
-              sectionHead {
-                title
-                description
-                sizes(maxWidth: 1000) {
-                  ...GatsbyContentfulSizes_withWebp_noBase64
-                }
-              }
-              text {
-                childMarkdownRemark {
-                  html
                 }
               }
             }

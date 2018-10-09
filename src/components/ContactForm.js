@@ -10,28 +10,28 @@ import 'whatwg-fetch' // Fetch Polyfill
 */
 
 const Form = styled.form`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
   max-width: ${props => props.theme.sizes.maxWidth};
   padding: 2rem;
-  margin: 0 auto;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
   input,
   textarea {
+    max-width: ${props => props.theme.sizes.maxWidth};
     font-family: inherit;
     font-size: inherit;
     border: none;
     outline: none;
-    background: ${props => props.theme.colors.bg1};
+    background: ${props => props.theme.colors.purewhite};
     color: ${props => props.theme.colors.black};
     border-radius: 2px;
     padding: 1em;
-    &::-webkit-input-placeholder {
+    &:-webkit-input-placeholder {
       color: ${props => props.theme.colors.black};
     }
-    &::-moz-placeholder {
+    &:-moz-placeholder {
       color: ${props => props.theme.colors.black};
     }
     &:-ms-input-placeholder {
@@ -106,7 +106,7 @@ const Submit = styled.input`
     background: ${props => props.theme.colors.accent1} !important;
   }
   @media (min-width: ${props => props.theme.responsive.medium}) {
-    width: 24.5%;
+    width: 49%;
   }
 `
 
@@ -199,7 +199,7 @@ class ContactForm extends React.Component {
             <input name="bot" onChange={this.handleInputChange} />
           </label>
         </p>
-        <label for="name">Name</label>
+        <label htmlFor="name">Name</label>
         <Name
           id="name"
           name="name"
@@ -209,7 +209,7 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
-        <label for="email">Email</label>
+        <label htmlFor="email">Email</label>
         <Email
           id="email"
           name="email"
@@ -219,7 +219,7 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
-        <label for="message">Message</label>
+        <label htmlFor="message">Message</label>
         <Message
           id="message"
           name="message"

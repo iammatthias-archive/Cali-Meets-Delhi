@@ -1,9 +1,9 @@
 const theme = {
   colors: {
-    pureWhite: '#ffffff',
+    pureWhite: '#EFF1F3',
     black: '#223843', // JAPANESE INDIGO
     bg1: '#DBD3D8',
-    bg2: '#EFF1F3',
+    bg2: '#f5efe9',
     accent1: '#D77A61',
     accent2: '#AA0085',
   },

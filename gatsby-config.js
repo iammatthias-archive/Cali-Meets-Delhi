@@ -49,6 +49,12 @@ module.exports = {
           ? contentfulConfig.development
           : contentfulConfig.production,
     },
+    {
+      resolve: `gatsby-source-instagram-all`,
+      options: {
+        access_token: '1113601.1677ed0.a851d02dcf4c48f3a39c5e6e324f6570',
+      },
+    },
     'gatsby-plugin-netlify',
     {
       resolve: 'gatsby-plugin-google-analytics',

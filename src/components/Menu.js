@@ -4,10 +4,6 @@ import styled from 'styled-components'
 import { slide as SideMenu } from 'react-burger-menu'
 import { anchorate } from 'anchorate'
 
-exports.onRouteUpdate = () => {
-  anchorate()
-}
-
 const Header = styled.header`
   background: ${props => props.theme.colors.accent2};
   width: 65px;
@@ -94,29 +90,16 @@ const Menu = () => {
       <MenuMobile styles={styles} width={'100%'} isOpen={false}>
         <ul>
           <li>
-            <Link to="/" exact>
-              Top
-            </Link>
+            <Link to="/">Top</Link>
           </li>
           <li>
-            <Link to="#ourStory" exact>
-              Our Story
-            </Link>
+            <Link to="#ourStory">Our Story</Link>
           </li>
           <li>
-            <Link to="#schedule" exact>
-              Schedule
-            </Link>
+            <Link to="#schedule">Schedule</Link>
           </li>
           <li>
-            <Link to="#registry" exact>
-              Registry
-            </Link>
-          </li>
-          <li>
-            <Link to="#contact" exact>
-              Contact Us
-            </Link>
+            <Link to="#contact">Contact Us</Link>
           </li>
           <li>
             <Text>

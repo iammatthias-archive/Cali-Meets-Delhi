@@ -21,7 +21,7 @@ const BgImg = styled(Img)`
     }
     &::before {
       content: '';
-      background: rgba(0, 0, 0, 0.25);
+      background: rgba(0, 0, 0, 0.15);
       position: absolute;
       top: 0;
       left: 0;
@@ -40,7 +40,7 @@ const Logo = styled.div`
   position: absolute;
   top: 45%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-55%, -50%);
   max-width: 350px;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     width: 50%;

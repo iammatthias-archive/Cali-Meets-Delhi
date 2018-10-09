@@ -4,16 +4,28 @@ import Reveal from 'react-reveal/Reveal'
 import Img from 'gatsby-image'
 
 const Wrapper = styled.div`
-  background: ${props => props.theme.colors.bg1};
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   min-height: 85vh;
-  padding: 10vh calc(env(safe-area-inset-right) + 2rem) 10vh
+  width: 100%;
+  margin: 0 auto;
+  max-width: ${props => props.theme.sizes.maxWidth};
+  padding: 5vh calc(env(safe-area-inset-right) + 2rem) 5vh
     calc(env(safe-area-inset-left) + 2rem);
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     min-height: 100vh;
+  }
+`
+const Heading = styled(Img)`
+  align-self: start;
+  width: 15vw;
+  margin: 2rem;
+  & > img {
+    object-fit: ${props => props.fit || 'contain'} !important;
+    object-position: ${props => props.position || '50% 50%'} !important;
   }
 `
 const CardList = styled.ul`
@@ -34,11 +46,6 @@ const Card = styled.li`
     transform: none !important;
   }
 `
-const Heading = styled.div`
-  max-width: 18.5rem;
-  padding: 2rem;
-  position: relative;
-`
 const EventTitle = styled.h3`
   color: ${props => props.theme.colors.black};
   padding: 1rem 1rem 1rem 0;
@@ -57,15 +64,13 @@ const Text = styled.div`
 
 const Agenda = props => {
   return (
-    <Wrapper>
-      <Reveal>
-        <Heading>
-          <Img
-            sizes={props.sectionHead.sizes}
-            alt={props.sectionHead.title}
-            title={props.sectionHead.title}
-          />
-        </Heading>
+    <Reveal>
+      <Wrapper>
+        <Heading
+          sizes={props.sectionHead.sizes}
+          alt={props.sectionHead.title}
+          title={props.sectionHead.title}
+        />
         <CardList>
           {props.events.map((event, index) => (
             <Card
@@ -84,8 +89,8 @@ const Agenda = props => {
             </Card>
           ))}
         </CardList>
-      </Reveal>
-    </Wrapper>
+      </Wrapper>
+    </Reveal>
   )
 }
 

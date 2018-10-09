@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import siteConfig from '../utils/siteConfig'
 import { ThemeProvider } from 'styled-components'
@@ -6,10 +7,11 @@ import globals from '../styles/global'
 import theme from '../styles/theme'
 import config from 'react-reveal/globals'
 config({ ssrFadeout: true })
+import Menu from '../components/Menu'
 
-const TemplateWrapper = ({ children }) => (
-  <ThemeProvider theme={theme}>
-    <div>
+const Layout = ({ children }) => {
+  return (
+    <div className="siteRoot">
       <Helmet>
         <html lang="en" />
         <title>{siteConfig.siteTitle}</title>
@@ -33,9 +35,17 @@ const TemplateWrapper = ({ children }) => (
           type="image/x-icon"
         />
       </Helmet>
-      {children()}
-    </div>
-  </ThemeProvider>
-)
 
-export default TemplateWrapper
+      <ThemeProvider theme={theme}>
+        <div id="outer-container">
+          <Menu />
+          <div className="siteContent" id="page-wrap">
+            {children}
+          </div>
+        </div>
+      </ThemeProvider>
+    </div>
+  )
+}
+
+export default Layout
