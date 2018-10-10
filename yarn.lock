@@ -816,11 +816,6 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@sheerun/mutationobserver-shim@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.2.tgz#8013f2af54a2b7d735f71560ff360d3a8176a87b"
-  integrity sha512-vTCdPp/T/Q3oSqwHmZ5Kpa9oI7iLtGl3RQaA/NyLHikvcrPxACkkKVr/XzkSPJWXHRhKGzVvb0urJsbMlRxi1Q==
-
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
@@ -4298,11 +4293,11 @@ dom-serializer@0, dom-serializer@~0.1.0:
     entities "~1.1.1"
 
 dom-testing-library@^3.1.0:
-  version "3.8.3"
-  resolved "https://registry.yarnpkg.com/dom-testing-library/-/dom-testing-library-3.8.3.tgz#12feae7bf77b11b7bb71f7cc6bc7f31542850a13"
-  integrity sha512-cyKmQ81Dd0hv4uizBu9FRsFTOLKThMVm7C+0WudLwm9m4z14V2H/wMirtwQayfRKcasOsOondtMd1rSqFmoXYA==
+  version "3.8.4"
+  resolved "https://registry.yarnpkg.com/dom-testing-library/-/dom-testing-library-3.8.4.tgz#4b0aa5f305225801aa31803b1f42fc405097235d"
+  integrity sha512-3RZQuTVGlE0gaxwJILnOIoxUmMZo7pSUp1owX1wPC/Hk6VuhxMcVlAS0dFRNffeR19O2XwD4bv9U0onoj1/4iA==
   dependencies:
-    "@sheerun/mutationobserver-shim" "^0.3.2"
+    mutationobserver-shim "^0.3.2"
     pretty-format "^23.6.0"
     wait-for-expect "^1.0.0"
 
@@ -6061,9 +6056,9 @@ gatsby-remark-responsive-iframe@^2.0.5:
     unist-util-visit "^1.3.0"
 
 gatsby-source-contentful@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.2.tgz#09d20c0dbd327cadf50d66fa6e97a35db7933067"
-  integrity sha512-u6NG9pt33xjllEhNS69a/FXPNjdRx68jBV2UuG9N48O5IIIPron/3DYr6deIjwwk6KfufPuaur+pQxW9M0pXZA==
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.3.tgz#dcb4a1122ac3e965d4f927b9c7ee88ea056e87eb"
+  integrity sha512-KGJHeaBOpJQBRW1i6mPYGcw50N2lUy0v6kmHeciEAo11qOYxTyV4GwjKoJWSdGxlDMh8rhT90tojU4T09AvOBQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
@@ -6141,9 +6136,9 @@ gatsby-transformer-remark@^2.1.7:
     unist-util-visit "^1.3.0"
 
 gatsby@^2.0.20:
-  version "2.0.20"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.20.tgz#bb4ee3588e61453fa88f6ba57570b913e321c314"
-  integrity sha512-3CKZIDcQTmKP7t04O9CeHe4pitS+oev+BfkrktvegGFx7Kfa2B4o5K+hhQjvPSeUv64wZAca4ijwV8+SiXT2hw==
+  version "2.0.21"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.21.tgz#c182ad534f5f6cc19cc1dbf0ac6c267b39e42652"
+  integrity sha512-Wh8AsbzqrmQhI+VwZxRESN9/qtrwtSF8OIQZ1l14ydcH2vGcjsWws11Nbe15BITYfoT9cqVMxMVR8iDeR+6yPA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -7052,9 +7047,9 @@ hsla-regex@^1.0.0:
   integrity sha1-wc56MWjIxmFAM6S194d/OyJfnDg=
 
 html-comment-regex@^1.1.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/html-comment-regex/-/html-comment-regex-1.1.1.tgz#668b93776eaae55ebde8f3ad464b307a4963625e"
-  integrity sha1-ZouTd26q5V696POtRkswekljYl4=
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/html-comment-regex/-/html-comment-regex-1.1.2.tgz#97d4688aeb5c81886a364faa0cad1dda14d433a7"
+  integrity sha512-P+M65QY2JQ5Y0G9KKdlDpo0zK+/OHptU5AaBwUfAIDJZk1MYf32Frm84EcOytfJE0t5JvkAnKlmjsXDnWzCJmQ==
 
 html-entities@^1.2.0:
   version "1.2.1"
@@ -9383,6 +9378,11 @@ multipipe@^0.1.2:
   integrity sha1-Ko8t33Du1WTf8tV/HhoTfZ8FB4s=
   dependencies:
     duplexer2 "0.0.2"
+
+mutationobserver-shim@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/mutationobserver-shim/-/mutationobserver-shim-0.3.2.tgz#f4d5dae7a4971a2207914fb5a90ebd514b65acca"
+  integrity sha1-9NXa56SXGiIHkU+1qQ69UUtlrMo=
 
 mute-stream@0.0.7, mute-stream@~0.0.4:
   version "0.0.7"
@@ -14286,12 +14286,12 @@ websocket-extensions@>=0.1.1:
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
   integrity sha512-nqHUnMXmBzT0w570r2JpJxfiSD1IzoI+HGVdd3aZ0yNi3ngvQ4jv1dtHt5VGxfI2yj5yqImPhOK4vmIh2xMbGg==
 
-whatwg-fetch@2.0.4:
+whatwg-fetch@2.0.4, whatwg-fetch@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.4.tgz#dde6a5df315f9d39991aa17621853d720b85566f"
   integrity sha512-dcQ1GWpOD/eEQ97k66aiEVpNnapVj90/+R+SXTPYGHpYBBypfKJEQjLrvMZ7YXbKm21gXd4NcuxUTjiv1YtLng==
 
-whatwg-fetch@>=0.10.0, whatwg-fetch@^3.0.0:
+whatwg-fetch@>=0.10.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
   integrity sha512-9GSJUgz1D4MfyKU7KRqwOjXCXTqWdFNvEr7eUBYchQiVc744mqK/MzXPNR2WsPkmkOa4ywfg8C2n8h+13Bey1Q==

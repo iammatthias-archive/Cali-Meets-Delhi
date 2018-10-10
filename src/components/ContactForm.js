@@ -1,13 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import 'whatwg-fetch' // Fetch Polyfill
-
-/*
-  ⚠️ This is an example of a contact form powered with Netlify form handling.
-  Be sure to review the Netlify documentation for more information:
-  https://www.netlify.com/docs/form-handling/
-*/
+import 'whatwg-fetch'
 
 const Form = styled.form`
   display: flex;
