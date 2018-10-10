@@ -5,9 +5,7 @@
   "repository": "https://github.com/iammatthias/Cali-Meets-Delhi.git",
   "author": "Matthias Jordan <me@iammatthias.com>",
   "dependencies": {
-    "anchorate": "^1.2.3",
     "babel-plugin-styled-components": "^1.8.0",
-    "chalk": "^2.3.2",
     "contentful-import": "^7.0.1",
     "dotenv": "^6.1.0",
     "gatsby": "^2.0.20",
@@ -29,8 +27,6 @@
     "gatsby-remark-responsive-iframe": "^2.0.5",
     "gatsby-source-contentful": "^2.0.2",
     "gatsby-source-filesystem": "^2.0.3",
-    "gatsby-source-instagram": "^0.1.4",
-    "gatsby-source-instagram-all": "^2.0.2",
     "gatsby-transformer-remark": "^2.1.7",
     "inquirer": "^6.2.0",
     "lodash": "^4.17.5",

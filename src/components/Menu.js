@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import { slide as SideMenu } from 'react-burger-menu'
-import { anchorate } from 'anchorate'
 
 const Header = styled.header`
   background: ${props => props.theme.colors.accent2};
