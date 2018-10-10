@@ -28,7 +28,6 @@ const Modules = props => {
               />
             </div>
           )}
-
           {module.__typename === 'ContentfulIntro' && (
             <div id="ourStory">
               <Counter />
