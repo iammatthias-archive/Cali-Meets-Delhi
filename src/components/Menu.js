@@ -25,7 +25,7 @@ const MenuMobile = styled(SideMenu)`
   }
   li {
     display: block;
-    margin-left: 1em;
+    margin-left: 1em !important;
     padding: 0.8rem 0;
   }
   a {
