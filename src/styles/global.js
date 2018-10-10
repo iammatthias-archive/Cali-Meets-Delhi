@@ -58,7 +58,7 @@ injectGlobal`
 
   ol, ul, li {
     list-style: none;
-    margin: 0;
+    margin: 0 !important;
   }
 
   blockquote, q {
