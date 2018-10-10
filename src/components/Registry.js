@@ -17,10 +17,17 @@ const Wrapper = styled.div`
   }
 `
 
-const Heading = styled.div`
-  max-width: 15rem;
-  padding: 2rem;
-  position: relative;
+const Heading = styled(Img)`
+  align-self: start;
+  width: 45vw;
+  margin: 2rem;
+  & > img {
+    object-fit: ${props => props.fit || 'contain'} !important;
+    object-position: ${props => props.position || '50% 50%'} !important;
+  }
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    width: 15vw;
+  }
 `
 
 const Zola = styled.div`
