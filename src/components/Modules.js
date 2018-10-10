@@ -8,7 +8,6 @@ import Counter from './Counter'
 
 const ListItem = styled.li`
   background: ${props => props.theme.colors.bg1};
-
   &:nth-child(odd) {
     background: ${props => props.theme.colors.bg2};
   }

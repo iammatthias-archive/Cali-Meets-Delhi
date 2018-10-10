@@ -56,8 +56,9 @@ injectGlobal`
     }
   }
 
-  ol, ul {
+  ol, ul, li {
     list-style: none;
+    margin: 0;
   }
 
   blockquote, q {
