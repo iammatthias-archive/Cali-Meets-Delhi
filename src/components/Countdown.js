@@ -21,8 +21,8 @@ const CountdownCol = styled.div`
 const CountdownColElement = styled.div`
   display: flex;
   flex-direction: column;
-  h2,
-  h3 {
+  h1,
+  h2 {
     color: ${props => props.theme.colors.accent1};
   }
 `
@@ -109,29 +109,29 @@ class Countdown extends Component {
       <CountdownWrapper>
         <CountdownCol>
           <CountdownColElement>
-            <h2>{this.addLeadingZeros(countDown.days)}</h2>
-            <h3>{countDown.days === 1 ? 'Day' : 'Days'}</h3>
+            <h1>{this.addLeadingZeros(countDown.days)}</h1>
+            <h2>{countDown.days === 1 ? 'Day' : 'Days'}</h2>
           </CountdownColElement>
         </CountdownCol>
 
         <CountdownCol>
           <CountdownColElement>
-            <h2>{this.addLeadingZeros(countDown.hours)}</h2>
-            <h3>Hours</h3>
+            <h1>{this.addLeadingZeros(countDown.hours)}</h1>
+            <h2>Hours</h2>
           </CountdownColElement>
         </CountdownCol>
 
         <CountdownCol>
           <CountdownColElement>
-            <h2>{this.addLeadingZeros(countDown.min)}</h2>
-            <h3>Min</h3>
+            <h1>{this.addLeadingZeros(countDown.min)}</h1>
+            <h2>Minutes</h2>
           </CountdownColElement>
         </CountdownCol>
 
         <CountdownCol>
           <CountdownColElement>
-            <h2>{this.addLeadingZeros(countDown.sec)}</h2>
-            <h3>Sec</h3>
+            <h1>{this.addLeadingZeros(countDown.sec)}</h1>
+            <h2>Seconds</h2>
           </CountdownColElement>
         </CountdownCol>
       </CountdownWrapper>

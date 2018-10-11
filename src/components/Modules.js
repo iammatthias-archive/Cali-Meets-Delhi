@@ -48,7 +48,7 @@ const Modules = props => {
             </div>
           )}
           {module.__typename === 'ContentfulAgenda' && (
-            <div id="schedule">
+            <div id="events">
               <Agenda
                 heading={module.heading}
                 events={module.events}

@@ -5,29 +5,33 @@ const typography = new Typography({
   title: 'Cali Meets Delhi',
   baseFontSize: '18px',
   baseLineHeight: 1.618,
-  headerFontFamily: ['IBM Plex Sans', 'sans-serif'],
-  bodyFontFamily: ['IBM Plex Sans', 'sans-serif'],
-  headerWeight: 700,
+  headerFontFamily: ['Abril Fatface', 'sans-serif'],
+  bodyFontFamily: ['Open Sans', 'sans-serif'],
+  headerWeight: 400,
 
   googleFonts: [
     {
-      name: 'IBM Plex Sans',
-      styles: ['400', '700'],
+      name: 'Abril Fatface',
+      styles: ['400'],
+    },
+    {
+      name: 'Open Sans',
+      styles: ['400'],
     },
   ],
 
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
     'h1,h2,h3,h4,h5,h6': {
       lineHeight: 1.618,
-      fontFamily: ['IBM Plex Sans', 'sans-serif'].join(','),
+      fontFamily: ['Abril Fatface', 'sans-serif'].join(','),
     },
     p: {
       lineHeight: 1.382,
-      fontFamily: ['IBM Plex Sans', 'sans-serif'].join(','),
+      fontFamily: ['Open Sans', 'sans-serif'].join(','),
     },
     a: {
       textDecoration: 'underline',
-      fontFamily: ['IBM Plex Sans', 'sans-serif'].join(','),
+      fontFamily: ['Open Sans', 'sans-serif'].join(','),
     },
     [MOBILE_MEDIA_QUERY]: {
       html: {
