@@ -22,16 +22,8 @@ const Form = styled.form`
     color: ${props => props.theme.colors.black};
     border-radius: 2px;
     padding: 1em;
-    &:-webkit-input-placeholder {
-      color: ${props => props.theme.colors.black};
-    }
-    &:-moz-placeholder {
-      color: ${props => props.theme.colors.black};
-    }
-    &:-ms-input-placeholder {
-      color: ${props => props.theme.colors.black};
-    }
-    &:-moz-placeholder {
+
+    &:placeholder {
       color: ${props => props.theme.colors.black};
     }
     &:required {

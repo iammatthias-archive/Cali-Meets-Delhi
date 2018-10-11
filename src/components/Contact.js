@@ -28,6 +28,17 @@ const Heading = styled(Img)`
     object-position: ${props => props.position || '50% 50%'} !important;
   }
 `
+const Text = styled.div`
+  color: ${props => props.theme.colors.black};
+  p {
+    color: ${props => props.theme.colors.black};
+    padding: 0.5rem 2rem;
+  }
+  em,
+  strong {
+    color: ${props => props.theme.colors.black};
+  }
+`
 
 const Contact = props => {
   return (
@@ -38,7 +49,11 @@ const Contact = props => {
           alt={props.sectionHead.title}
           title={props.sectionHead.title}
         />
-
+        <Text
+          dangerouslySetInnerHTML={{
+            __html: props.text.childMarkdownRemark.html,
+          }}
+        />
         <ContactForm />
       </Wrapper>
     </Reveal>

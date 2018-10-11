@@ -54,7 +54,7 @@ const typography = new Typography({
     },
     [MOBILE_MEDIA_QUERY]: {
       html: {
-        fontSize: `${16 / 16 * 100}%`,
+        fontSize: `${(16 / 16) * 100}%`,
       },
       blockquote: {
         marginLeft: rhythm(-3 / 4),
