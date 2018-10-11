@@ -44,15 +44,15 @@ export const query = graphql`
               title
               image {
                 title
-                sizes(maxWidth: 1800) {
-                  ...GatsbyContentfulSizes_withWebp_noBase64
+                fluid(maxWidth: 1800) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
               logo {
                 title
                 description
-                sizes(maxWidth: 1000) {
-                  ...GatsbyContentfulSizes_withWebp_noBase64
+                fluid(maxWidth: 1000) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
             }
@@ -62,13 +62,29 @@ export const query = graphql`
               sectionHead {
                 title
                 description
-                sizes(maxWidth: 1000) {
-                  ...GatsbyContentfulSizes_withWebp_noBase64
+                fluid(maxWidth: 1000) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
               text {
                 childMarkdownRemark {
                   html
+                }
+              }
+            }
+            ... on ContentfulGallery {
+              title
+              sectionHead {
+                title
+                description
+                fluid(maxWidth: 1000) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
+                }
+              }
+              images {
+                title
+                fluid(maxWidth: 1000) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
             }
@@ -78,8 +94,8 @@ export const query = graphql`
               sectionHead {
                 title
                 description
-                sizes(maxWidth: 1000) {
-                  ...GatsbyContentfulSizes_withWebp_noBase64
+                fluid(maxWidth: 1000) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
               events {
@@ -104,8 +120,8 @@ export const query = graphql`
               sectionHead {
                 title
                 description
-                sizes(maxWidth: 1000) {
-                  ...GatsbyContentfulSizes_withWebp_noBase64
+                fluid(maxWidth: 1000) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
               text {

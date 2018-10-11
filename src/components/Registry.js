@@ -16,20 +16,18 @@ const Wrapper = styled.div`
     min-height: 100vh;
   }
 `
-
 const Heading = styled(Img)`
   align-self: start;
-  width: 45vw;
   margin: 2rem;
+  width: 50%;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    width: 25%;
+  }
   & > img {
     object-fit: ${props => props.fit || 'contain'} !important;
     object-position: ${props => props.position || '50% 50%'} !important;
   }
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    width: 15vw;
-  }
 `
-
 const Zola = styled.div`
   padding: 0 2rem 2rem;
   max-width: ${props => props.theme.sizes.maxWidth};

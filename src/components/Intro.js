@@ -4,11 +4,6 @@ import Img from 'gatsby-image'
 import Reveal from 'react-reveal/Reveal'
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   min-height: 85vh;
   width: 100%;
   margin: 0 auto;
@@ -19,20 +14,18 @@ const Wrapper = styled.div`
     min-height: 100vh;
   }
 `
-
 const Heading = styled(Img)`
   align-self: start;
-  width: 45vw;
   margin: 2rem;
+  width: 50%;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    width: 25%;
+  }
   & > img {
     object-fit: ${props => props.fit || 'contain'} !important;
     object-position: ${props => props.position || '50% 50%'} !important;
   }
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    width: 15vw;
-  }
 `
-
 const Text = styled.div`
   padding: 2rem;
   position: relative;
@@ -45,7 +38,7 @@ const Intro = props => {
     <Reveal>
       <Wrapper>
         <Heading
-          sizes={props.sectionHead.sizes}
+          fluid={props.sectionHead.fluid}
           alt={props.sectionHead.title}
           title={props.sectionHead.title}
         />

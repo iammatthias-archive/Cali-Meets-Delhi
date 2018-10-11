@@ -95,5 +95,8 @@ injectGlobal`
   	width: 100%;
   	height: auto;
   }
+  #lightboxBackdrop img {
+    width: auto !important;
+  }
 
 `

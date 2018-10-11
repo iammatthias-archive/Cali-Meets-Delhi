@@ -71,7 +71,7 @@ const Hero = props => {
         ]}
       >
         <BgImg
-          sizes={props.image.sizes}
+          fluid={props.image.fluid}
           position={props.position}
           alt={props.image.description}
           title={props.image.title}
@@ -80,7 +80,7 @@ const Hero = props => {
       </Plx>
       {props.logo && (
         <Logo>
-          <Img sizes={props.logo.sizes} alt={props.logo.description} />
+          <Img fluid={props.logo.fluid} alt={props.logo.description} />
         </Logo>
       )}
     </Wrapper>

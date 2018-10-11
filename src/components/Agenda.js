@@ -4,11 +4,6 @@ import Reveal from 'react-reveal/Reveal'
 import Img from 'gatsby-image'
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   min-height: 85vh;
   width: 100%;
   margin: 0 auto;
@@ -21,14 +16,14 @@ const Wrapper = styled.div`
 `
 const Heading = styled(Img)`
   align-self: start;
-  width: 45vw;
   margin: 2rem;
+  width: 50%;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    width: 25%;
+  }
   & > img {
     object-fit: ${props => props.fit || 'contain'} !important;
     object-position: ${props => props.position || '50% 50%'} !important;
-  }
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    width: 15vw;
   }
 `
 const CardList = styled.ul`
@@ -65,12 +60,12 @@ const Text = styled.div`
   }
 `
 
-const Agenda = props => {
+const Events = props => {
   return (
     <Reveal>
       <Wrapper>
         <Heading
-          sizes={props.sectionHead.sizes}
+          fluid={props.sectionHead.fluid}
           alt={props.sectionHead.title}
           title={props.sectionHead.title}
         />
@@ -97,4 +92,4 @@ const Agenda = props => {
   )
 }
 
-export default Agenda
+export default Events

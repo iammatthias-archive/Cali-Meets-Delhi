@@ -5,10 +5,6 @@ import Reveal from 'react-reveal/Reveal'
 import ContactForm from './ContactForm'
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: relative;
   min-height: 85vh;
   width: 100%;
@@ -20,26 +16,25 @@ const Wrapper = styled.div`
     min-height: 100vh;
   }
 `
-
 const Heading = styled(Img)`
   align-self: start;
-  width: 45vw;
   margin: 2rem;
+  width: 50%;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    width: 25%;
+  }
   & > img {
     object-fit: ${props => props.fit || 'contain'} !important;
     object-position: ${props => props.position || '50% 50%'} !important;
   }
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    width: 15vw;
-  }
 `
 
-const Intro = props => {
+const Contact = props => {
   return (
     <Reveal>
       <Wrapper>
         <Heading
-          sizes={props.sectionHead.sizes}
+          fluid={props.sectionHead.fluid}
           alt={props.sectionHead.title}
           title={props.sectionHead.title}
         />
@@ -50,4 +45,4 @@ const Intro = props => {
   )
 }
 
-export default Intro
+export default Contact

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import React from 'react'
 import Hero from './Hero'
 import Intro from './Intro'
+import Gallery from './Gallery'
 import Agenda from './Agenda'
 import Contact from './Contact'
 import Counter from './Counter'
@@ -33,6 +34,15 @@ const Modules = props => {
               <Intro
                 heading={module.heading}
                 text={module.text}
+                sectionHead={module.sectionHead}
+              />
+            </div>
+          )}
+          {module.__typename === 'ContentfulGallery' && (
+            <div id="gallery">
+              <Gallery
+                heading={module.heading}
+                photos={module.images}
                 sectionHead={module.sectionHead}
               />
             </div>
