@@ -9,18 +9,8 @@ import {
   AccordionItemBody,
 } from 'react-accessible-accordion'
 import '../styles/accordion.css'
+import Wrapper from './Wrapper'
 
-const Wrapper = styled.div`
-  min-height: 85vh;
-  width: 100%;
-  margin: 0 auto;
-  max-width: ${props => props.theme.sizes.maxWidth};
-  padding: 5vh calc(env(safe-area-inset-right) + 2rem) 5vh
-    calc(env(safe-area-inset-left) + 2rem);
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    min-height: 100vh;
-  }
-`
 const Heading = styled(Img)`
   align-self: start;
   margin: 2rem;

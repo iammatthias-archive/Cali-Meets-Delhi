@@ -3,19 +3,8 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import Reveal from 'react-reveal/Reveal'
 import ContactForm from './ContactForm'
+import Wrapper from './Wrapper'
 
-const Wrapper = styled.div`
-  position: relative;
-  min-height: 85vh;
-  width: 100%;
-  margin: 0 auto;
-  max-width: ${props => props.theme.sizes.maxWidth};
-  padding: 5vh calc(env(safe-area-inset-right) + 2rem) 5vh
-    calc(env(safe-area-inset-left) + 2rem);
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    min-height: 100vh;
-  }
-`
 const Heading = styled(Img)`
   align-self: start;
   margin: 2rem;

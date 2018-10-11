@@ -34,11 +34,10 @@ injectGlobal`
 
   /* Added to Fix Footer to bottom of viewport */
   html, body {
-    height: 100%;
     background: #f5efe9;
   }
   .siteRoot {
-    height: 100vh;
+
     display: flex;
     flex-direction: column;
   }

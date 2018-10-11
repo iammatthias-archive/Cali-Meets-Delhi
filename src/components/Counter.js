@@ -9,10 +9,6 @@ const Wrapper = styled.div`
   justify-content: center;
   position: relative;
   min-height: 20vh;
-  padding: 10vh 0 0;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    min-height: 25vh;
-  }
 `
 
 const Intro = props => {

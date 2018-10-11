@@ -16,7 +16,6 @@ const Header = styled.header`
 `
 
 const MenuMobile = styled(SideMenu)`
-  padding: 4rem 0;
   ul {
     display: flex;
     justify-content: space-between;

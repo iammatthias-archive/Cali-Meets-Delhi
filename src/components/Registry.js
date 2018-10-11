@@ -2,20 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import Reveal from 'react-reveal/Reveal'
+import Wrapper from './Wrapper'
 
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  min-height: 85vh;
-  height: 100%;
-  padding: 10vh calc(env(safe-area-inset-right) + 2rem) 10vh
-    calc(env(safe-area-inset-left) + 2rem);
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    min-height: 100vh;
-  }
-`
 const Heading = styled(Img)`
   align-self: start;
   margin: 2rem;
