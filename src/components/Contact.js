@@ -32,7 +32,7 @@ const Text = styled.div`
   color: ${props => props.theme.colors.black};
   p {
     color: ${props => props.theme.colors.black};
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 0;
   }
   em,
   strong {

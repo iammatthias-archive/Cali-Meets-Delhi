@@ -17,9 +17,6 @@ const Wrapper = styled.div`
     min-height: 100vh;
   }
 `
-const GridWrapper = styled.div`
-  padding: 0 2rem;
-`
 const Heading = styled(Img)`
   align-self: start;
   margin: 2rem;
@@ -80,23 +77,21 @@ class Gallery extends Component {
               alt={this.props.sectionHead.title}
               title={this.props.sectionHead.title}
             />
-            <GridWrapper>
-              <ResponsiveMasonry
-                columnsCountBreakPoints={{ 350: 3, 750: 5, 900: 7 }}
-              >
-                <Masonry gutter="0">
-                  {photos.map((photo, i) => (
-                    <a
-                      key={i}
-                      href={photo.fluid.srcSet}
-                      onClick={e => this.openLightbox(i, e)}
-                    >
-                      <Image fluid={photo.fluid} />
-                    </a>
-                  ))}
-                </Masonry>
-              </ResponsiveMasonry>
-            </GridWrapper>
+            <ResponsiveMasonry
+              columnsCountBreakPoints={{ 350: 3, 750: 5, 900: 7 }}
+            >
+              <Masonry gutter="0">
+                {photos.map((photo, i) => (
+                  <a
+                    key={i}
+                    href={photo.fluid.srcSet}
+                    onClick={e => this.openLightbox(i, e)}
+                  >
+                    <Image fluid={photo.fluid} />
+                  </a>
+                ))}
+              </Masonry>
+            </ResponsiveMasonry>
           </Wrapper>
         </Reveal>
         <Lightbox

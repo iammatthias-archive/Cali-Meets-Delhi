@@ -10,7 +10,7 @@ const Form = styled.form`
   justify-content: space-between;
   width: 100%;
   max-width: ${props => props.theme.sizes.maxWidth};
-  padding: 2rem;
+  padding: 2rem 0;
   input,
   textarea {
     max-width: ${props => props.theme.sizes.maxWidth};

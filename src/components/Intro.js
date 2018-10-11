@@ -27,7 +27,6 @@ const Heading = styled(Img)`
   }
 `
 const Text = styled.div`
-  padding: 2rem;
   position: relative;
   p {
     padding: 0.5rem 0;

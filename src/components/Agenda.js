@@ -2,6 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import Reveal from 'react-reveal/Reveal'
 import Img from 'gatsby-image'
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemTitle,
+  AccordionItemBody,
+} from 'react-accessible-accordion'
+import '../styles/accordion.css'
 
 const Wrapper = styled.div`
   min-height: 85vh;
@@ -26,27 +33,14 @@ const Heading = styled(Img)`
     object-position: ${props => props.position || '50% 50%'} !important;
   }
 `
-const CardList = styled.ul`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  max-width: ${props => props.theme.sizes.maxWidth};
-`
-const Card = styled.li`
-  flex: 1 100%;
-  width: 100%;
-  border-radius: 2px;
-  transition: 0.3s;
-  padding: 2rem;
-  @media (hover: none) {
-    transform: none !important;
-  }
-`
+
 const EventTitle = styled.h3`
   color: ${props => props.theme.colors.black};
-  padding: 1rem 1rem 1rem 0;
+  padding: 1rem 0;
+  &:hover {
+    color: ${props => props.theme.colors.accent1};
+  }
+  transition: 0.5s ease;
 `
 const Text = styled.div`
   color: ${props => props.theme.colors.black};
@@ -69,24 +63,31 @@ const Events = props => {
           alt={props.sectionHead.title}
           title={props.sectionHead.title}
         />
-        <CardList>
+        <Accordion>
           {props.events.map((event, index) => (
-            <Card
+            <AccordionItem
               key={event.id}
               title={event.title}
               heading={event.heading}
               dateTime={event.dateTime}
               text={event.text}
             >
-              <EventTitle>{event.title}</EventTitle>
-              <Text
-                dangerouslySetInnerHTML={{
-                  __html: event.text.childMarkdownRemark.html,
-                }}
-              />
-            </Card>
+              <AccordionItemTitle className="u-position-relative">
+                <EventTitle>
+                  <div className="accordion__arrow" role="presentation" />
+                  {event.title}
+                </EventTitle>
+              </AccordionItemTitle>
+              <AccordionItemBody>
+                <Text
+                  dangerouslySetInnerHTML={{
+                    __html: event.text.childMarkdownRemark.html,
+                  }}
+                />
+              </AccordionItemBody>
+            </AccordionItem>
           ))}
-        </CardList>
+        </Accordion>
       </Wrapper>
     </Reveal>
   )
