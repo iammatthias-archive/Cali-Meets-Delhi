@@ -1,11 +1,11 @@
 const theme = {
   colors: {
     pureWhite: '#EFF1F3',
-    black: '#223843', // JAPANESE INDIGO
-    bg1: '#DBD3D8',
-    bg2: '#f5efe9',
+    black: '#364A54', // JAPANESE INDIGO
+    bg1: '#EDD9D5',
+    bg2: '#F2E2DA',
     accent1: '#D77A61',
-    accent2: '#AA0085',
+    accent2: '#870058',
   },
   sizes: {
     maxWidth: '1200px',
