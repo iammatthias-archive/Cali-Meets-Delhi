@@ -6,7 +6,7 @@ import Wrapper from './Wrapper'
 
 const Heading = styled(Img)`
   align-self: start;
-  margin: 2rem;
+  margin: 0 0 2rem;
   width: 50%;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     width: 25%;
