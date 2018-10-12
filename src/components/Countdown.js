@@ -23,7 +23,7 @@ const CountdownColElement = styled.div`
   flex-direction: column;
   h1,
   h2 {
-    color: ${props => props.theme.colors.accent1};
+    color: ${props => props.theme.colors.black};
   }
 `
 
