@@ -1,14 +1,15 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import { slide as SideMenu } from 'react-burger-menu'
+import { push as SideMenu } from 'react-burger-menu'
 
 const Header = styled.header`
   background: ${props => props.theme.colors.accent2};
   width: 65px;
   height: 65px;
   position: fixed;
-  z-index: 999;
+  right: 0;
+  z-index: 10;
   transition: 0.5s ease;
   &:hover {
     background: ${props => props.theme.colors.accent1} !important;
@@ -81,13 +82,20 @@ var styles = {
   },
   bmOverlay: {
     background: 'rgba(252, 248, 247,.9)',
+    height: '65px',
   },
 }
 
 const Menu = () => {
   return (
     <Header>
-      <MenuMobile styles={styles} width={'100%'} isOpen={false}>
+      <MenuMobile
+        styles={styles}
+        right
+        isOpen={false}
+        pageWrapId={'page-wrap'}
+        outerContainerId={'outer-container'}
+      >
         <ul>
           <li>
             <Link to="/">Top</Link>
