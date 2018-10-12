@@ -20,6 +20,7 @@
 .accordion__body {
   display: block;
   animation: fadein 0.35s ease-in;
+  padding-bottom: 1.5rem;
 }
 
 .accordion__body--hidden {
@@ -31,6 +32,7 @@
 .accordion__title > *:last-child,
 .accordion__body > *:last-child {
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .accordion__arrow {
