@@ -10,6 +10,13 @@
   position: relative;
 }
 
+.accordion__item {
+  border-bottom: 1px solid #223843;
+}
+.accordion__item:last-child {
+  border-bottom: 0px solid #223843;
+}
+
 .accordion__body {
   display: block;
   animation: fadein 0.35s ease-in;
