@@ -146,7 +146,9 @@ class Menu extends React.Component {
         >
           <ul>
             <li>
-              <Link to="/">Top</Link>
+              <Link onClick={() => this.closeMenu()} to="/">
+                Top
+              </Link>
             </li>
             <li>
               <Link onClick={() => this.closeMenu()} to="#ourStory">
