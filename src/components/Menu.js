@@ -11,16 +11,14 @@ const Header = styled.header`
 const Icon = styled.div`
   z-index: 1 !important;
   transition: 0.5s ease;
-  padding: 0.95rem;
+  margin: 0.5rem;
   right: 0;
   float: right;
-  background: ${props => props.theme.colors.accent2};
   width: 65px;
   height: 65px;
-  fill: ${props => props.theme.colors.accent1} !important;
+  fill: ${props => props.theme.colors.accent2} !important;
   &:hover {
-    fill: ${props => props.theme.colors.accent2} !important;
-    background: ${props => props.theme.colors.accent1} !important;
+    fill: ${props => props.theme.colors.accent1} !important;
   }
 `
 const MenuMobile = styled(SideMenu)`
@@ -115,23 +113,18 @@ class Menu extends React.Component {
         <Headroom>
           <Icon onClick={() => this.toggleMenu()}>
             <svg
-              width="100%"
-              height="100%"
-              viewBox="0 0 220 221"
-              version="1.1"
               xmlns="http://www.w3.org/2000/svg"
+              data-name="Layer 1"
+              viewBox="0 0 100 100"
+              x="0px"
+              y="0px"
             >
-              <g transform="matrix(1,0,0,1,-40.5,-39.3)">
-                <g transform="matrix(-1,0,-0,1,300.9,0)">
-                  <path d="M189.6,62.1L51.9,62.1C45.6,62.1 40.5,57 40.5,50.7C40.5,44.4 45.6,39.3 51.9,39.3L189.6,39.3C195.9,39.3 201,44.4 201,50.7C201,57 195.9,62.1 189.6,62.1Z" />
-                </g>
-                <g transform="matrix(-1,0,-0,1,300.9,0)">
-                  <path d="M249,161.1L51.9,161.1C45.6,161.1 40.5,156 40.5,149.7C40.5,143.4 45.6,138.3 51.9,138.3L249,138.3C255.3,138.3 260.4,143.4 260.4,149.7C260.4,156 255.3,161.1 249,161.1Z" />
-                </g>
-                <g transform="matrix(-1,0,-0,1,300.9,0)">
-                  <path d="M189.6,260.1L51.9,260.1C45.6,260.1 40.5,255 40.5,248.7C40.5,242.4 45.6,237.3 51.9,237.3L189.6,237.3C195.9,237.3 201,242.4 201,248.7C201,255 195.9,260.1 189.6,260.1Z" />
-                </g>
-              </g>
+              <title>Artboard 15</title>
+              <path d="M50.15,86.16A36,36,0,1,0,24.7,75.61,35.76,35.76,0,0,0,50.15,86.16Zm-24-60a34,34,0,1,1,0,48.08A33.78,33.78,0,0,1,26.11,26.11Z" />
+              <rect x="35.28" y="33.84" width="29.75" height="5" />
+              <rect x="35.28" y="43.72" width="19.49" height="5" />
+              <rect x="35.28" y="53.59" width="10.07" height="5" />
+              <rect x="35.28" y="64.47" width="19.49" height="5" />
             </svg>
           </Icon>
         </Headroom>
