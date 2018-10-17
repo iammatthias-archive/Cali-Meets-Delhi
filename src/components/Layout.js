@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import siteConfig from '../utils/siteConfig'
 import { injectGlobal, ThemeProvider } from 'styled-components'
+
 import Menu from '../components/Menu'
 import theme from '../styles/theme'
 import config from 'react-reveal/globals'
@@ -43,6 +44,9 @@ injectGlobal`
   }
   .siteContent {
     flex: 1 0 auto;
+    top: 0;
+    position: absolute;
+    width: 100%;
   }
   footer {
     width: 100%;
@@ -136,6 +140,7 @@ const Layout = ({ children }) => {
       <ThemeProvider theme={theme}>
         <div id="outer-container">
           <Menu />
+
           <div className="siteContent" id="page-wrap">
             {children}
           </div>
