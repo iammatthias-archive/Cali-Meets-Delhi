@@ -164,12 +164,12 @@ class Menu extends React.Component {
               </Link>
             </li>
             <li>
-              <Link
+              <a
                 onClick={() => this.closeMenu()}
-                to="https://zola.com/registry/trishaandmatthias"
+                href="https://zola.com/registry/trishaandmatthias"
               >
                 Registry
-              </Link>
+              </a>
             </li>
             <li>
               <Text>
