@@ -164,6 +164,14 @@ class Menu extends React.Component {
               </Link>
             </li>
             <li>
+              <Link
+                onClick={() => this.closeMenu()}
+                to="https://zola.com/registry/trishaandmatthias"
+              >
+                Registry
+              </Link>
+            </li>
+            <li>
               <Text>
                 <img
                   alt="Add to homescreen"
