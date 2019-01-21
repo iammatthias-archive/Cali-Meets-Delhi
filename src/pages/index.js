@@ -114,6 +114,22 @@ export const query = graphql`
                 }
               }
             }
+            ... on ContentfulRegistry {
+              title
+              heading
+              sectionHead {
+                title
+                description
+                fluid(maxWidth: 1000) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
+                }
+              }
+              text {
+                childMarkdownRemark {
+                  html
+                }
+              }
+            }
             ... on ContentfulContact {
               title
               heading

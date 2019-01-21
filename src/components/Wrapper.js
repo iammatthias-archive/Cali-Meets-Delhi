@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   position: relative;
-  min-height: 85vh;
+  min-height: 100%;
   width: 100%;
   margin: 0 auto;
   max-width: ${props => props.theme.sizes.maxWidth};
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   padding-bottom: calc(env(safe-area-inset-bottom) + 2rem);
 
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    min-height: 100vh;
+    min-height: 100%;
   }
 `
 const Contact = props => {

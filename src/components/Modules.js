@@ -6,11 +6,12 @@ import Gallery from './Gallery'
 import Agenda from './Agenda'
 import Contact from './Contact'
 import Counter from './Counter'
+import Registry from './Registry'
 
 const ListItem = styled.li`
-  background: ${props => props.theme.colors.bg1};
+  background: ${props => props.theme.colors.bg2};
   &:nth-child(odd) {
-    background: ${props => props.theme.colors.bg2};
+    background: ${props => props.theme.colors.bg1};
   }
 `
 
@@ -52,6 +53,15 @@ const Modules = props => {
               <Agenda
                 heading={module.heading}
                 events={module.events}
+                sectionHead={module.sectionHead}
+              />
+            </div>
+          )}
+          {module.__typename === 'ContentfulRegistry' && (
+            <div id="registry">
+              <Registry
+                heading={module.heading}
+                text={module.text}
                 sectionHead={module.sectionHead}
               />
             </div>

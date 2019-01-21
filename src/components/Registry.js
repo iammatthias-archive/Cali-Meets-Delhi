@@ -30,13 +30,11 @@ const Registry = props => {
   return (
     <Wrapper>
       <Reveal>
-        <Heading>
-          <Img
-            sizes={props.sectionHead.sizes}
-            alt={props.sectionHead.title}
-            title={props.sectionHead.title}
-          />
-        </Heading>
+        <Heading
+          fluid={props.sectionHead.fluid}
+          alt={props.sectionHead.title}
+          title={props.sectionHead.title}
+        />
 
         <Zola
           dangerouslySetInnerHTML={{

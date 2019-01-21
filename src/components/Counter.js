@@ -15,7 +15,7 @@ const Intro = props => {
   return (
     <Wrapper>
       <Reveal>
-        <Countdown date={`2018-11-20T12:00:00+05:30`} />
+        <Countdown date={`2019-04-06T10:00:00-08:00`} />
       </Reveal>
     </Wrapper>
   )
