@@ -3,7 +3,7 @@ import React from 'react'
 import Hero from './Hero'
 import Intro from './Intro'
 import Gallery from './Gallery'
-import Agenda from './Agenda'
+
 import Contact from './Contact'
 import Counter from './Counter'
 import Registry from './Registry'
@@ -48,15 +48,7 @@ const Modules = props => {
               />
             </div>
           )}
-          {module.__typename === 'ContentfulAgenda' && (
-            <div id="events">
-              <Agenda
-                heading={module.heading}
-                events={module.events}
-                sectionHead={module.sectionHead}
-              />
-            </div>
-          )}
+
           {module.__typename === 'ContentfulRegistry' && (
             <div id="registry">
               <Registry
