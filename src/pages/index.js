@@ -88,32 +88,7 @@ export const query = graphql`
                 }
               }
             }
-            ... on ContentfulAgenda {
-              title
-              heading
-              sectionHead {
-                title
-                description
-                fluid(maxWidth: 1000) {
-                  ...GatsbyContentfulFluid_withWebp_noBase64
-                }
-              }
-              events {
-                __typename
-                ... on ContentfulEvent {
-                  id
-                  title
-                  heading
-                  dateTime(formatString: "MMMM Do YYYY, h:mma")
-                  text {
-                    childMarkdownRemark {
-                      html
-                      excerpt(pruneLength: 250)
-                    }
-                  }
-                }
-              }
-            }
+
             ... on ContentfulRegistry {
               title
               heading
