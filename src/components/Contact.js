@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import Reveal from 'react-reveal/Reveal'
-import ContactForm from './ContactForm'
 import Wrapper from './Wrapper'
 
 const Heading = styled(Img)`
@@ -43,7 +42,6 @@ const Contact = props => {
             __html: props.text.childMarkdownRemark.html,
           }}
         />
-        <ContactForm />
       </Wrapper>
     </Reveal>
   )
