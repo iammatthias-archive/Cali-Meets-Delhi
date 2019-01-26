@@ -222,14 +222,15 @@ const Layout = ({ children }) => {
         <meta name="description" content={siteConfig.siteDescription} />
         <meta property="og:title" content={siteConfig.siteTitle} />
         <meta property="og:description" content={siteConfig.siteDescription} />
+        <meta property="og:image" content={siteConfig.shareImage} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={siteConfig.siteTitle} />
-        <meta property="og:url" content="https://calimeetsdelhi.com/" />
-        <link rel="apple-touch-icon" href="/logos/logo-512.png" />
+        <meta property="og:url" content={siteConfig.siteUrl} />
+        <link rel="apple-touch-icon" href={siteConfig.shareLogo} />
         <link
           rel="shortcut icon"
-          href="/logos/logo-512.png"
+          href={siteConfig.shareLogo}
           type="image/x-icon"
         />
       </Helmet>
