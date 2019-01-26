@@ -44,14 +44,14 @@ export const query = graphql`
               title
               image {
                 title
-                fluid(maxWidth: 1800, quality: 90) {
+                fluid(maxWidth: 1200, quality: 80) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
               logo {
                 title
                 description
-                fluid(maxWidth: 1000) {
+                fluid(maxWidth: 800, quality: 80) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
@@ -62,7 +62,7 @@ export const query = graphql`
               sectionHead {
                 title
                 description
-                fluid(maxWidth: 1000) {
+                fluid(maxWidth: 800, quality: 80) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
@@ -77,13 +77,13 @@ export const query = graphql`
               sectionHead {
                 title
                 description
-                fluid(maxWidth: 1000) {
+                fluid(maxWidth: 800, quality: 80) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
               images {
                 title
-                fluid(maxWidth: 1000) {
+                fluid(maxWidth: 1200, quality: 80) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
@@ -95,7 +95,7 @@ export const query = graphql`
               sectionHead {
                 title
                 description
-                fluid(maxWidth: 1000) {
+                fluid(maxWidth: 800, quality: 80) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
@@ -111,7 +111,7 @@ export const query = graphql`
               sectionHead {
                 title
                 description
-                fluid(maxWidth: 1000) {
+                fluid(maxWidth: 800, quality: 80) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
