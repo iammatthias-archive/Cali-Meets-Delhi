@@ -8,7 +8,7 @@ import {
   AccordionItemBody,
 } from 'react-accessible-accordion'
 import '../styles/accordion.css'
-import { Box, Text } from 'rebass'
+import { Box, Heading as Header, Text } from 'rebass'
 
 const Wrapper = styled(Box)`
   position: relative;
@@ -27,17 +27,6 @@ const Heading = styled(Img)`
     object-position: ${props => props.position || '50% 50%'} !important;
   }
 `
-
-const EventTitle = styled.h3`
-  color: var(--color-tertiary);
-  padding: 1rem 0;
-  margin: 0;
-  &:hover {
-    color: var(--color-accent);
-  }
-  transition: 0.5s ease;
-`
-
 const FAQ = props => {
   return (
     <Wrapper py={[4, 5]} px={[4, 5, 5, 6, 7]}>
@@ -56,10 +45,10 @@ const FAQ = props => {
             text={event.text}
           >
             <AccordionItemTitle className="u-position-relative">
-              <EventTitle>
+              <Header>
                 <div className="accordion__arrow" role="presentation" />
                 {event.title}
-              </EventTitle>
+              </Header>
             </AccordionItemTitle>
             <AccordionItemBody>
               <Text

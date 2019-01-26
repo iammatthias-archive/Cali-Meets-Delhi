@@ -122,6 +122,10 @@ a,
   text-rendering: optimizeLegibility;
 }
 
+h1, h2, h3 {
+  font-weight: normal !important;
+}
+
 h1 {
   font-size: 3em;
   text-align: left;
@@ -136,6 +140,7 @@ h2 {
 }
 
 h3 {
+  font-size: 1.5em;
   padding: 0;
   margin: 3.5em 0 0 0;
   line-height: 2rem;
@@ -147,7 +152,7 @@ h1, h2 {
 p, i, a {
   margin: .5em 0;
   font-family: "Merriweather";
-  font-size: 1.25em;
+  font-size: 1.15em;
   line-height: 1.58;
 }
 

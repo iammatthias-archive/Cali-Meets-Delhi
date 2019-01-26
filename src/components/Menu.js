@@ -127,37 +127,37 @@ class Menu extends React.Component {
         >
           <ul>
             <li>
-              <Link onClick={() => this.closeMenu()} to="#top">
+              <Link onClick={() => this.closeMenu()} to="/#top">
                 Top
               </Link>
             </li>
             <li>
-              <Link onClick={() => this.closeMenu()} to="#events">
+              <Link onClick={() => this.closeMenu()} to="/#events">
                 Info
               </Link>
             </li>
             <li>
-              <Link onClick={() => this.closeMenu()} to="#ourstory">
+              <Link onClick={() => this.closeMenu()} to="/#ourstory">
                 Our Story
               </Link>
             </li>
             <li>
-              <Link onClick={() => this.closeMenu()} to="#faq">
+              <Link onClick={() => this.closeMenu()} to="/#faq">
                 FAQ
               </Link>
             </li>
             <li>
-              <Link onClick={() => this.closeMenu()} to="#registry">
+              <Link onClick={() => this.closeMenu()} to="/#registry">
                 Registry
               </Link>
             </li>
             <li>
-              <Link onClick={() => this.closeMenu()} to="#gallery">
+              <Link onClick={() => this.closeMenu()} to="/#gallery">
                 Gallery
               </Link>
             </li>
             <li>
-              <Link onClick={() => this.closeMenu()} to="#contact">
+              <Link onClick={() => this.closeMenu()} to="/#contact">
                 Contact
               </Link>
             </li>
