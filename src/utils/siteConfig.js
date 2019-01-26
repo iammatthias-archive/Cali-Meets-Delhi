@@ -1,8 +1,10 @@
 module.exports = {
   siteTitle: 'Cali Meets Delhi',
-  siteTitleAlt: "We got married in India, and now we're doing it again!", // This allows an alternative site title for SEO schema.
+  siteTitleAlt:
+    "We got married in India, and now we're doing it again in Laguna!", // This allows an alternative site title for SEO schema.
   publisher: 'Matthias Jordan & Trisha Thapar', // Organization name used for SEO schema
-  siteDescription: "We got married in India, and now we're doing it again!",
+  siteDescription:
+    "We got married in India, and now we're doing it again in Laguna!",
   siteUrl: 'https://calimeetsdelhi.com/', // Site domain. Do not include a trailing slash! If you wish to use a path prefix you can read more about that here: https://www.gatsbyjs.org/docs/path-prefix/
   author: 'Matthias Jordan', // Author for RSS author segment and SEO schema
   authorUrl: 'https://iammatthias.com', // URL used for author and publisher schema, can be a social profile or other personal site
