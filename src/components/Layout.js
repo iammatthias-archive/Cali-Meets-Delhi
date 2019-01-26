@@ -98,11 +98,11 @@ const Paint = createGlobalStyle`
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-base: #100B00;
-    --color-secondary: #E6E3E1;
-    --color-tertiary: #F4DAD3;
-    --color-highlight: #FE5F55;
-    --color-accent: #FBF2F0; 
+    --color-base: #FDF5F6;
+    --color-secondary: #FDF9FA;
+    --color-tertiary: #2B3654;
+    --color-highlight: #95C4B4;
+    --color-accent1: #F9DBDE;
  }
 }
 html,
