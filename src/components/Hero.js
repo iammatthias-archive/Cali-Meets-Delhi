@@ -20,14 +20,26 @@ const BgImg = styled(Img)`
       object-fit: ${props => props.fit || 'cover'} !important;
       position: fixed;
     }
+    &::before {
+      content: '';
+      background: rgba(255, 255, 255, 0.2);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    }
   }
 `
 
 const Logo = styled.div`
-  z-index: 0;
+  z-index: 2;
   width: 60%;
   position: fixed;
-  top: 45%;
+  top: 40%;
   left: 50%;
   transform: translate(-55%, -50%);
   max-width: 350px;
@@ -52,7 +64,7 @@ const Hero = props => {
             properties: [
               {
                 startValue: 1,
-                endValue: 1.5,
+                endValue: 2,
                 property: 'scale',
               },
             ],
