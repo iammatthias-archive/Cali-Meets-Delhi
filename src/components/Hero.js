@@ -31,11 +31,11 @@ const Logo = styled.div`
   left: 50%;
   transform: translate(-55%, -50%);
   max-width: 350px;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+  @media screen and (min-width: 52em) {
     width: 50%;
     max-width: 450px;
   }
-  @media screen and (min-width: ${props => props.theme.responsive.large}) {
+  @media screen and (min-width: 64em) {
     width: 50%;
     max-width: 500px;
   }

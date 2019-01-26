@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import Reveal from 'react-reveal/Reveal'
-import { Box } from 'rebass'
+
+import { Box, Text } from 'rebass'
 
 const Wrapper = styled(Box)`
   position: relative;
@@ -21,32 +21,21 @@ const Heading = styled(Img)`
     object-position: ${props => props.position || '50% 50%'} !important;
   }
 `
-const Zola = styled.div`
-  height: 100%;
-  iframe {
-    max-width: 100%;
-    height: 100vh;
-  }
-`
-
-const Registry = props => {
+const Story = props => {
   return (
     <Wrapper p={[4, 5]}>
-      <Reveal>
-        <Heading
-          fluid={props.sectionHead.fluid}
-          alt={props.sectionHead.title}
-          title={props.sectionHead.title}
-        />
-
-        <Zola
-          dangerouslySetInnerHTML={{
-            __html: props.text.childMarkdownRemark.html,
-          }}
-        />
-      </Reveal>
+      <Heading
+        fluid={props.sectionHead.fluid}
+        alt={props.sectionHead.title}
+        title={props.sectionHead.title}
+      />
+      <Text
+        dangerouslySetInnerHTML={{
+          __html: props.text.childMarkdownRemark.html,
+        }}
+      />
     </Wrapper>
   )
 }
 
-export default Registry
+export default Story

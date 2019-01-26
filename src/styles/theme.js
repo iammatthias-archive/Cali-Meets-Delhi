@@ -1,20 +1,13 @@
-const theme = {
-  colors: {
-    pureWhite: '#EFF1F3',
-    black: '#364A54', // JAPANESE INDIGO
-    bg1: '#EDD9D5',
-    bg2: '#F2E2DA',
-    accent1: '#D77A61',
-    accent2: '#870058',
+export default {
+  breakpoints: ['40em', '52em', '64em'],
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
+  space: [0, 4, 8, 16, 32, 64, 128, 256],
+  fonts: {
+    sans: 'system-ui, sans-serif',
+    mono: 'Menlo, monospace',
   },
-  sizes: {
-    maxWidth: '1200px',
-  },
-  responsive: {
-    small: '30em',
-    medium: '50em',
-    large: '100em',
+  shadows: {
+    small: '0 0 4px rgba(0, 0, 0, .125)',
+    large: '0 0 24px rgba(0, 0, 0, .125)',
   },
 }
-
-export default theme

@@ -1,23 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
-import Reveal from 'react-reveal/Reveal'
 import Countdown from '../components/Countdown'
 
-const Wrapper = styled.div`
-  display: flex;
+import { Flex } from 'rebass'
+
+const Wrapper = styled(Flex)`
   align-items: center;
   justify-content: center;
   position: relative;
   min-height: 20vh;
-  background: ${props => props.theme.colors.bg2};
+  background: var(--color-base);
 `
 
 const Intro = props => {
   return (
-    <Wrapper>
-      <Reveal>
-        <Countdown date={`2019-04-06T10:00:00-08:00`} />
-      </Reveal>
+    <Wrapper width={1} p={2}>
+      <Countdown date={`2019-04-06T10:00:00-08:00`} />
     </Wrapper>
   )
 }

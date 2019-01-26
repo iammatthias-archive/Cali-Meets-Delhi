@@ -1,14 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import Reveal from 'react-reveal/Reveal'
-import Wrapper from './Wrapper'
+import { Box, Text } from 'rebass'
+
+const Wrapper = styled(Box)`
+  position: relative;
+  background: var(--color-base);
+`
 
 const Heading = styled(Img)`
   align-self: start;
   margin: 0 0 2rem;
   width: 50%;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+  @media screen and (min-width: 52em) {
     width: 25%;
   }
   & > img {
@@ -16,34 +20,21 @@ const Heading = styled(Img)`
     object-position: ${props => props.position || '50% 50%'} !important;
   }
 `
-const Text = styled.div`
-  color: ${props => props.theme.colors.black};
-  p {
-    color: ${props => props.theme.colors.black};
-    padding: 0.5rem 0;
-  }
-  em,
-  strong {
-    color: ${props => props.theme.colors.black};
-  }
-`
 
 const Contact = props => {
   return (
-    <Reveal>
-      <Wrapper>
-        <Heading
-          fluid={props.sectionHead.fluid}
-          alt={props.sectionHead.title}
-          title={props.sectionHead.title}
-        />
-        <Text
-          dangerouslySetInnerHTML={{
-            __html: props.text.childMarkdownRemark.html,
-          }}
-        />
-      </Wrapper>
-    </Reveal>
+    <Wrapper p={[4, 5]}>
+      <Heading
+        fluid={props.sectionHead.fluid}
+        alt={props.sectionHead.title}
+        title={props.sectionHead.title}
+      />
+      <Text
+        dangerouslySetInnerHTML={{
+          __html: props.text.childMarkdownRemark.html,
+        }}
+      />
+    </Wrapper>
   )
 }
 

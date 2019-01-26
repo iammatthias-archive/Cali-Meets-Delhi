@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import PropTypes from 'prop-types'
 import Modules from '../components/Modules'
 import Footer from '../components/Footer'
+
 import { Element } from 'react-scroll'
 
 class IndexPage extends React.Component {
@@ -11,12 +12,14 @@ class IndexPage extends React.Component {
     const sections = this.props.data.allContentfulSection.edges
     return (
       <Layout>
-        {sections.map(({ node: section }) => (
-          <Element key={section.id} name={section.slug}>
-            <Modules modules={section.modules} />
-          </Element>
-        ))}
-        <Footer />
+        <>
+          {sections.map(({ node: section }) => (
+            <Element key={section.id} name={section.slug}>
+              <Modules key={section.id} modules={section.modules} />
+            </Element>
+          ))}
+          <Footer />
+        </>
       </Layout>
     )
   }
@@ -49,6 +52,54 @@ export const query = graphql`
                 description
                 fluid(maxWidth: 800, quality: 80) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
+                }
+              }
+            }
+            ... on ContentfulAgenda {
+              title
+              heading
+              sectionHead {
+                title
+                description
+                fluid(maxWidth: 1000) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
+                }
+              }
+              events {
+                __typename
+                ... on ContentfulEventCondensed {
+                  id
+                  title
+                  text {
+                    childMarkdownRemark {
+                      html
+                      excerpt(pruneLength: 250)
+                    }
+                  }
+                }
+              }
+            }
+            ... on ContentfulFaq {
+              title
+              heading
+              sectionHead {
+                title
+                description
+                fluid(maxWidth: 1000) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
+                }
+              }
+              events {
+                __typename
+                ... on ContentfulFaqAnswer {
+                  id
+                  title
+                  text {
+                    childMarkdownRemark {
+                      html
+                      excerpt(pruneLength: 250)
+                    }
+                  }
                 }
               }
             }
