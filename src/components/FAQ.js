@@ -17,14 +17,11 @@ const Wrapper = styled(Box)`
 
 const Heading = styled(Img)`
   align-self: start;
-  margin: 0 0 1rem;
-  width: 50%;
-  @media screen and (min-width: 52em) {
-    width: 25%;
-  }
-  & > img {
-    object-fit: ${props => props.fit || 'contain'} !important;
-    object-position: ${props => props.position || '50% 50%'} !important;
+  margin: 0 0 2rem;
+  height: 7em;
+  img {
+    object-fit: contain !important;
+    object-position: left !important;
   }
 `
 const FAQ = props => {

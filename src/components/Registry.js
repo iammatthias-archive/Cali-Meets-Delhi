@@ -14,11 +14,11 @@ const Heading = styled(Img)`
   margin: 0 0 2rem;
   width: 50%;
   @media screen and (min-width: 52em) {
-    width: 25%;
+    height: 10em;
   }
-  & > img {
-    object-fit: ${props => props.fit || 'contain'} !important;
-    object-position: ${props => props.position || '50% 50%'} !important;
+  img {
+    object-fit: contain !important;
+    object-position: left !important;
   }
 `
 const Zola = styled.div`
