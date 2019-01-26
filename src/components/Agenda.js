@@ -19,7 +19,8 @@ const Events = props => {
     >
       {props.events.map((event, index) => (
         <Box
-          p={3}
+          py={3}
+          px={4}
           width={[1, 1 / 2]}
           key={event.id}
           title={event.title}

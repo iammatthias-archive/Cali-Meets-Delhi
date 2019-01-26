@@ -90,10 +90,10 @@ const Reset = createGlobalStyle`
 `
 const Paint = createGlobalStyle`
 :root {
-    --color-base: #FDFBFD;
+    --color-base: #FDF5F6;
     --color-secondary: #FDF9FA;
-    --color-tertiary: #2F3649;
-    --color-highlight: #ABD6C8;
+    --color-tertiary: #2B3654;
+    --color-highlight: #95C4B4;
     --color-accent1: #F9DBDE;
 }
 @media (prefers-color-scheme: dark) {
@@ -111,6 +111,7 @@ body {
   width: 100%;
   font-size: 16px;
   background: var(--color-base);
+  color: var(--color-tertiary);
 }
 h1,
 h2,
@@ -129,7 +130,6 @@ h1 {
 
 h2 {
   font-size: 1.625em;
-  font-weight: 900;
   padding: 0;
   margin: 3.5em 0 0 0;
   line-height: 2em;
@@ -146,7 +146,7 @@ h1, h2 {
 
 p, i, a {
   margin: .5em 0;
-  font-family: "Lato";
+  font-family: "Merriweather";
   font-size: 1.25em;
   line-height: 1.58;
 }
@@ -161,7 +161,7 @@ a {
 }
 
 blockquote {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Abril Fatface", serif;
   font-size: 1em;
   font-style: italic;
   line-height: 2.25em;
@@ -184,7 +184,7 @@ mark, .highlighted {
 
 .first-letter {
   overflow-wrap: break-word;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Abril Fatface", serif;
   font-size: 3.75em;
   line-height: 3.75em;
   display: block;
@@ -194,7 +194,7 @@ mark, .highlighted {
 }
 
 .subtitle {
-  font-family: "Lato", sans-serif;
+  font-family: "Merriweather", sans-serif;
   color: var(--color-secondary);
   margin: 0 0 1.5em 0;
 }
