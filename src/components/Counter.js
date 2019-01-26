@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   justify-content: center;
   position: relative;
   min-height: 20vh;
+  background: ${props => props.theme.colors.bg2};
 `
 
 const Intro = props => {

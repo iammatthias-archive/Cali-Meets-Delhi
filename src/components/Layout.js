@@ -5,6 +5,7 @@ import { injectGlobal, ThemeProvider } from 'styled-components'
 
 import Menu from '../components/Menu'
 import theme from '../styles/theme'
+
 import config from 'react-reveal/globals'
 config({ ssrFadeout: true })
 

@@ -4,8 +4,6 @@ import Layout from '../components/Layout'
 import PropTypes from 'prop-types'
 import Modules from '../components/Modules'
 import Footer from '../components/Footer'
-
-import Container from '../components/Container'
 import { Element } from 'react-scroll'
 
 class IndexPage extends React.Component {
@@ -13,13 +11,11 @@ class IndexPage extends React.Component {
     const sections = this.props.data.allContentfulSection.edges
     return (
       <Layout>
-        <Container>
-          {sections.map(({ node: section }) => (
-            <Element key={section.id} name={section.slug}>
-              <Modules modules={section.modules} />
-            </Element>
-          ))}
-        </Container>
+        {sections.map(({ node: section }) => (
+          <Element key={section.id} name={section.slug}>
+            <Modules modules={section.modules} />
+          </Element>
+        ))}
         <Footer />
       </Layout>
     )

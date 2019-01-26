@@ -9,10 +9,11 @@ import Counter from './Counter'
 import Registry from './Registry'
 
 const ListItem = styled.li`
-  background: ${props => props.theme.colors.bg2};
-  &:nth-child(odd) {
-    background: ${props => props.theme.colors.bg1};
+  &:first-child {
+    height: 95vh;
+    z-index: 0;
   }
+  z-index: 10;
 `
 
 const Modules = props => {
