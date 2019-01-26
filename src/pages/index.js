@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import Modules from '../components/Modules'
 import Footer from '../components/Footer'
 
-import Container from '../components/Container'
 import { Element } from 'react-scroll'
 
 class IndexPage extends React.Component {
@@ -13,14 +12,14 @@ class IndexPage extends React.Component {
     const sections = this.props.data.allContentfulSection.edges
     return (
       <Layout>
-        <Container>
+        <>
           {sections.map(({ node: section }) => (
             <Element key={section.id} name={section.slug}>
-              <Modules modules={section.modules} />
+              <Modules key={section.id} modules={section.modules} />
             </Element>
           ))}
-        </Container>
-        <Footer />
+          <Footer />
+        </>
       </Layout>
     )
   }
@@ -44,15 +43,63 @@ export const query = graphql`
               title
               image {
                 title
-                fluid(maxWidth: 1800, quality: 90) {
+                fluid(maxWidth: 1200, quality: 80) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
               logo {
                 title
                 description
+                fluid(maxWidth: 800, quality: 80) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
+                }
+              }
+            }
+            ... on ContentfulAgenda {
+              title
+              heading
+              sectionHead {
+                title
+                description
                 fluid(maxWidth: 1000) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
+                }
+              }
+              events {
+                __typename
+                ... on ContentfulEventCondensed {
+                  id
+                  title
+                  text {
+                    childMarkdownRemark {
+                      html
+                      excerpt(pruneLength: 250)
+                    }
+                  }
+                }
+              }
+            }
+            ... on ContentfulFaq {
+              title
+              heading
+              sectionHead {
+                title
+                description
+                fluid(maxWidth: 1000) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
+                }
+              }
+              events {
+                __typename
+                ... on ContentfulFaqAnswer {
+                  id
+                  title
+                  text {
+                    childMarkdownRemark {
+                      html
+                      excerpt(pruneLength: 250)
+                    }
+                  }
                 }
               }
             }
@@ -62,7 +109,7 @@ export const query = graphql`
               sectionHead {
                 title
                 description
-                fluid(maxWidth: 1000) {
+                fluid(maxWidth: 800, quality: 80) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
@@ -77,13 +124,13 @@ export const query = graphql`
               sectionHead {
                 title
                 description
-                fluid(maxWidth: 1000) {
+                fluid(maxWidth: 800, quality: 80) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
               images {
                 title
-                fluid(maxWidth: 1000) {
+                fluid(maxWidth: 1200, quality: 80) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
@@ -95,7 +142,7 @@ export const query = graphql`
               sectionHead {
                 title
                 description
-                fluid(maxWidth: 1000) {
+                fluid(maxWidth: 800, quality: 80) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
@@ -111,7 +158,7 @@ export const query = graphql`
               sectionHead {
                 title
                 description
-                fluid(maxWidth: 1000) {
+                fluid(maxWidth: 800, quality: 80) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }

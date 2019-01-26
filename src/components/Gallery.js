@@ -1,25 +1,22 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import Lightbox from 'react-images'
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
-import Reveal from 'react-reveal/Reveal'
-import Wrapper from './Wrapper'
+import { chunk, sum } from 'lodash'
+import { Box } from 'rebass'
+
+const Wrapper = styled(Box)`
+  position: relative;
+  background: var(--color-secondary);
+`
 
 const Heading = styled(Img)`
   align-self: start;
   margin: 0 0 2rem;
-  width: 50%;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    width: 25%;
+  height: 5em;
+  img {
+    object-fit: contain !important;
+    object-position: left !important;
   }
-  & > img {
-    object-fit: ${props => props.fit || 'contain'} !important;
-    object-position: ${props => props.position || '50% 50%'} !important;
-  }
-`
-const Image = styled(Img)`
-  width: 100%;
 `
 
 class Gallery extends Component {
@@ -56,47 +53,50 @@ class Gallery extends Component {
   }
 
   render() {
-    const { photos } = this.props
+    const { photos, itemsPerRow: itemsPerRowByBreakpoints } = this.props
+
+    const aspectRatios = photos.map(photos => photos.fluid.aspectRatio)
+    const rowAspectRatioSumsByBreakpoints = itemsPerRowByBreakpoints.map(
+      itemsPerRow =>
+        chunk(aspectRatios, itemsPerRow).map(rowAspectRatios =>
+          sum(rowAspectRatios)
+        )
+    )
+
     return (
-      <>
-        <Reveal>
-          <Wrapper>
-            <Heading
-              fluid={this.props.sectionHead.fluid}
-              alt={this.props.sectionHead.title}
-              title={this.props.sectionHead.title}
-            />
-            <ResponsiveMasonry
-              columnsCountBreakPoints={{ 350: 3, 750: 5, 900: 7 }}
-            >
-              <Masonry gutter="0">
-                {photos.map((photo, i) => (
-                  <a
-                    key={i}
-                    href={photo.fluid.srcSet}
-                    onClick={e => this.openLightbox(i, e)}
-                  >
-                    <Image fluid={photo.fluid} />
-                  </a>
-                ))}
-              </Masonry>
-            </ResponsiveMasonry>
-          </Wrapper>
-        </Reveal>
-        <Lightbox
-          backdropClosesModal
-          enableKeyboardInput
-          showImageCount
-          imageCountSeparator={' of '}
-          images={this.state.photos}
-          preloadNextImage
-          currentImage={this.state.photo}
-          isOpen={this.state.lightbox}
-          onClickPrev={() => this.gotoPrevLightboxImage()}
-          onClickNext={() => this.gotoNextLightboxImage()}
-          onClose={() => this.closeLightbox()}
+      <Wrapper py={[4, 5]} px={[4, 5, 5, 6, 7]}>
+        <Heading
+          fluid={this.props.sectionHead.fluid}
+          alt={this.props.sectionHead.title}
+          title={this.props.sectionHead.title}
         />
-      </>
+
+        <Box>
+          {photos.map((photo, i) => (
+            <Box
+              key={i}
+              as={Img}
+              fluid={photo.fluid}
+              title={photo.title}
+              width={rowAspectRatioSumsByBreakpoints.map(
+                (rowAspectRatioSums, j) => {
+                  const rowIndex = Math.floor(i / itemsPerRowByBreakpoints[j])
+                  const rowAspectRatioSum = rowAspectRatioSums[rowIndex]
+
+                  return `${(photo.fluid.aspectRatio / rowAspectRatioSum) *
+                    100}%`
+                }
+              )}
+              css={`
+            display: inline-block;
+            vertical-align: middle;
+            objectFit: 'cover !important',
+            height: '100%',
+          `}
+            />
+          ))}
+        </Box>
+      </Wrapper>
     )
   }
 }

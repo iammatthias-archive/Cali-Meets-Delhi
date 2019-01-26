@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+
 import { Box, Text } from 'rebass'
 
 const Wrapper = styled(Box)`
@@ -11,14 +12,16 @@ const Wrapper = styled(Box)`
 const Heading = styled(Img)`
   align-self: start;
   margin: 0 0 2rem;
-  height: 5em;
+  width: 50%;
+  @media screen and (min-width: 52em) {
+    height: 10em;
+  }
   img {
     object-fit: contain !important;
     object-position: left !important;
   }
 `
-
-const Contact = props => {
+const Story = props => {
   return (
     <Wrapper py={[4, 5]} px={[4, 5, 5, 6, 7]}>
       <Heading
@@ -35,4 +38,4 @@ const Contact = props => {
   )
 }
 
-export default Contact
+export default Story

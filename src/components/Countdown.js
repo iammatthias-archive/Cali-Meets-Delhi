@@ -3,15 +3,14 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const CountdownWrapper = styled.div`
-  text-align: center;
   display: grid;
   height: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+  @media screen and (min-width: 52em) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  @media screen and (min-width: ${props => props.theme.responsive.large}) {
+  @media screen and (min-width: 64em) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `
@@ -23,7 +22,9 @@ const CountdownColElement = styled.div`
   flex-direction: column;
   h1,
   h2 {
-    color: ${props => props.theme.colors.black};
+    color: var(--color-tertiary);
+    text-align: center;
+    margin: 0;
   }
 `
 

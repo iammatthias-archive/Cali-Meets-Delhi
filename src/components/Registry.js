@@ -2,23 +2,26 @@ import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import Reveal from 'react-reveal/Reveal'
-import Wrapper from './Wrapper'
+import { Box } from 'rebass'
+
+const Wrapper = styled(Box)`
+  position: relative;
+  background: var(--color-base);
+`
 
 const Heading = styled(Img)`
   align-self: start;
   margin: 0 0 2rem;
   width: 50%;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    width: 25%;
+  @media screen and (min-width: 52em) {
+    height: 10em;
   }
-  & > img {
-    object-fit: ${props => props.fit || 'contain'} !important;
-    object-position: ${props => props.position || '50% 50%'} !important;
+  img {
+    object-fit: contain !important;
+    object-position: left !important;
   }
 `
 const Zola = styled.div`
-  padding: 0 2rem 2rem;
-  max-width: ${props => props.theme.sizes.maxWidth};
   height: 100%;
   iframe {
     max-width: 100%;
@@ -28,7 +31,7 @@ const Zola = styled.div`
 
 const Registry = props => {
   return (
-    <Wrapper>
+    <Wrapper py={[4, 5]} px={[4, 5, 5, 6, 7]}>
       <Reveal>
         <Heading
           fluid={props.sectionHead.fluid}

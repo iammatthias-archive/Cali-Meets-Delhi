@@ -4,24 +4,25 @@ import Img from 'gatsby-image'
 import Plx from 'react-plx'
 
 const Wrapper = styled.div`
-  position: relative;
+  position: fixed;
   overflow: hidden;
+  width: 100%;
+  z-index: 0;
 `
 
 const BgImg = styled(Img)`
   @supports (object-fit: cover) {
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 95vh;
     & > img {
       object-fit: ${props => props.fit || 'cover'} !important;
-      object-position: ${props => props.position || '50% 50%'} !important;
+      position: fixed;
     }
     &::before {
       content: '';
-      background: rgba(0, 0, 0, 0.15);
+      background: rgba(255, 255, 255, 0.2);
       position: absolute;
       top: 0;
       left: 0;
@@ -37,16 +38,16 @@ const BgImg = styled(Img)`
 const Logo = styled.div`
   z-index: 2;
   width: 60%;
-  position: absolute;
-  top: 45%;
+  position: fixed;
+  top: 40%;
   left: 50%;
   transform: translate(-55%, -50%);
   max-width: 350px;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+  @media screen and (min-width: 52em) {
     width: 50%;
     max-width: 450px;
   }
-  @media screen and (min-width: ${props => props.theme.responsive.large}) {
+  @media screen and (min-width: 64em) {
     width: 50%;
     max-width: 500px;
   }
@@ -58,12 +59,12 @@ const Hero = props => {
       <Plx
         parallaxData={[
           {
-            start: 0,
+            start: 1,
             duration: '.hero',
             properties: [
               {
                 startValue: 1,
-                endValue: 1.25,
+                endValue: 2,
                 property: 'scale',
               },
             ],
