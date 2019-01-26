@@ -17,7 +17,7 @@ const Wrapper = styled(Box)`
 
 const Heading = styled(Img)`
   align-self: start;
-  margin: 0 0 2rem;
+  margin: 0 0 1rem;
   width: 50%;
   @media screen and (min-width: 52em) {
     width: 25%;
@@ -31,6 +31,7 @@ const Heading = styled(Img)`
 const EventTitle = styled.h3`
   color: var(--color-tertiary);
   padding: 1rem 0;
+  margin: 0;
   &:hover {
     color: var(--color-accent);
   }
@@ -39,7 +40,7 @@ const EventTitle = styled.h3`
 
 const FAQ = props => {
   return (
-    <Wrapper p={[4, 5]}>
+    <Wrapper py={[4, 5]} px={[4, 5, 5, 6, 7]}>
       <Heading
         fluid={props.sectionHead.fluid}
         alt={props.sectionHead.title}

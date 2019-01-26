@@ -67,7 +67,7 @@ const Modules = props => {
                 heading={module.heading}
                 photos={module.images}
                 sectionHead={module.sectionHead}
-                itemsPerRow={[1, 2, 3]}
+                itemsPerRow={[1, 2, 3, 4]}
               />
             </div>
           )}

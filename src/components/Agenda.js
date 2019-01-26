@@ -10,11 +10,17 @@ const Wrapper = styled(Flex)`
 
 const Events = props => {
   return (
-    <Wrapper p={[4, 5]} flexWrap="wrap">
+    <Wrapper
+      py={[4, 5]}
+      px={[4, 5, 5, 6, 7]}
+      flexWrap="wrap"
+      alignItems="center"
+      justifyContent="center"
+    >
       {props.events.map((event, index) => (
         <Box
           p={3}
-          width={[1, 1 / 3]}
+          width={[1, 1 / 2]}
           key={event.id}
           title={event.title}
           heading={event.heading}

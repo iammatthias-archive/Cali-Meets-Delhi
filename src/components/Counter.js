@@ -14,7 +14,7 @@ const Wrapper = styled(Flex)`
 
 const Intro = props => {
   return (
-    <Wrapper width={1} p={2}>
+    <Wrapper width={1} py={[4, 5]} px={[4, 5, 5, 6, 7]}>
       <Countdown date={`2019-04-06T10:00:00-08:00`} />
     </Wrapper>
   )

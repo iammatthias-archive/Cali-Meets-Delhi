@@ -90,13 +90,11 @@ const Reset = createGlobalStyle`
 `
 const Paint = createGlobalStyle`
 :root {
-    --color-base: #EDD9D5;
-    --color-secondary: #F2E2DA;
-    --color-tertiary: #100B00;
-    --color-highlight: #FE5F55;
-    --color-accent1: #223843;
-    --color-accent2: #D77A61;
-    --color-accent3: #870058;
+    --color-base: #FDFBFD;
+    --color-secondary: #FDF9FA;
+    --color-tertiary: #2F3649;
+    --color-highlight: #ABD6C8;
+    --color-accent1: #F9DBDE;
 }
 @media (prefers-color-scheme: dark) {
   :root {

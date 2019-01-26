@@ -17,9 +17,9 @@ const Icon = styled.div`
   float: right;
   width: 65px;
   height: 65px;
-  fill: var(--color-accent1) !important;
+  fill: var(--color-tertiary) !important;
   &:hover {
-    fill: var(--color-accent2) !important;
+    fill: var(--color-highlight) !important;
   }
 `
 const MenuMobile = styled(SideMenu)`
@@ -37,9 +37,12 @@ const MenuMobile = styled(SideMenu)`
   a {
     font-family: 'Abril Fatface', sans-serif;
     text-decoration: none;
-    color: var(--color-accent1);
+    color: var(--color-tertiary);
     font-weight: 600;
     transition: all 0.5s;
+    &:hover {
+      color: var(--color-highlight) !important;
+    }
   }
 `
 
@@ -58,13 +61,13 @@ var styles = {
     right: '25px',
   },
   bmCross: {
-    background: '#D77A61',
+    background: '#2F3649',
   },
   bmMenu: {
     padding: '1em 0',
     fontSize: '1.5em',
     height: '100vh',
-    background: '#F2E2DA',
+    background: '#F9DBDE',
   },
   bmMenuWrap: {
     height: '100vh',

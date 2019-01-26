@@ -67,7 +67,7 @@ class Gallery extends Component {
     )
 
     return (
-      <Wrapper p={[4, 5]}>
+      <Wrapper py={[4, 5]} px={[4, 5, 5, 6, 7]}>
         <Heading
           fluid={this.props.sectionHead.fluid}
           alt={this.props.sectionHead.title}

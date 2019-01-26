@@ -23,7 +23,7 @@ const Heading = styled(Img)`
 `
 const Story = props => {
   return (
-    <Wrapper p={[4, 5]}>
+    <Wrapper py={[4, 5]} px={[4, 5, 5, 6, 7]}>
       <Heading
         fluid={props.sectionHead.fluid}
         alt={props.sectionHead.title}

@@ -31,7 +31,7 @@ const Zola = styled.div`
 
 const Registry = props => {
   return (
-    <Wrapper p={[4, 5]}>
+    <Wrapper py={[4, 5]} px={[4, 5, 5, 6, 7]}>
       <Reveal>
         <Heading
           fluid={props.sectionHead.fluid}
